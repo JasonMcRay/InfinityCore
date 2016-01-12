@@ -2,6 +2,7 @@ package com.gmail.mcrayjason.infinitycore;
 
 import com.gmail.mcrayjason.infinitycore.init.ModBlocks;
 import com.gmail.mcrayjason.infinitycore.init.ModItems;
+import com.gmail.mcrayjason.infinitycore.init.Recipes;
 import com.gmail.mcrayjason.infinitycore.proxies.CommonProxy;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -9,7 +10,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:gregtech")
 public class InfinityCore
 {
     @SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.COMMON_PROXY)
@@ -28,7 +29,7 @@ public class InfinityCore
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) // Recipes and such
     {
-
+        Recipes.registerRecipes();
     }
 
     @Mod.EventHandler

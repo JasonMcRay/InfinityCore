@@ -1,19 +1,19 @@
 item.rodWooden.name=Wooden Rod
-item.itemCluster_0.name=Native Platinum Cluster
-item.itemCluster_1.name=Native Nickel Cluster
+item.itemCluster_0.name=Native Aluminium Cluster
+item.itemCluster_1.name=Native Beryllium Cluster
 item.itemCluster_2.name=Native Cobalt Cluster
-item.itemCluster_3.name=Native Tungsten Cluster
-item.itemCluster_4.name=Native Iridium Cluster
+item.itemCluster_3.name=Native Iridium Cluster
+item.itemCluster_4.name=Native Molybdenum Cluster
 item.itemCluster_5.name=Native Naquadah Cluster
-item.itemCluster_6.name=Native Zinc Cluster
-item.itemCluster_7.name=Native Aluminium Cluster
-item.itemCluster_8.name=Native Uranium 235 Cluster
-item.itemCluster_9.name=Native Uranium 238 Cluster
-item.itemCluster_10.name=Native Beryllium Cluster
-item.itemCluster_11.name=Native Thorium Cluster
-item.itemCluster_12.name=Native Palladium Cluster
-item.itemCluster_13.name=Native Molybdenum Cluster
-item.itemCluster_14.name=Native Neodymium Cluster
+item.itemCluster_6.name=Native Neodymium Cluster
+item.itemCluster_7.name=Native Nickel Cluster
+item.itemCluster_8.name=Native Palladium Cluster
+item.itemCluster_9.name=Native Platinum Cluster
+item.itemCluster_10.name=Native Thorium Cluster
+item.itemCluster_11.name=Native Tungsten Cluster
+item.itemCluster_12.name=Native Uranium 235 Cluster
+item.itemCluster_13.name=Native Uranium 238 Cluster
+item.itemCluster_14.name=Native Zinc Cluster
 
 tile.infinityStone.name=Stone of Infinity
 

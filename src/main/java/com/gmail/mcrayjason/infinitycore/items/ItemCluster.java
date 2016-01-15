@@ -1,6 +1,7 @@
 package com.gmail.mcrayjason.infinitycore.items;
 
 import com.gmail.mcrayjason.infinitycore.Reference;
+import com.gmail.mcrayjason.infinitycore.creativetab.CreativeTabIFC;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -14,7 +15,6 @@ public class ItemCluster extends ItemIFC {
     public ItemCluster(String name) {
         super(name);
         this.setHasSubtypes(true);
-        this.setCreativeTab(CreativeTabs.tabMaterials);
     }
     @Override
     public void registerIcons(IIconRegister regIcon)

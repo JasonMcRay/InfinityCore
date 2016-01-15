@@ -16,6 +16,25 @@ public class ItemCluster extends ItemIFC {
         this.setHasSubtypes(true);
         this.setCreativeTab(CreativeTabs.tabMaterials);
     }
+    @Override
+    public void registerIcons(IIconRegister regIcon)
+    {
+            this.icons[0] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterAluminium");
+            this.icons[1] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterBeryllium");
+            this.icons[2] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterCobalt");
+            this.icons[3] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterIridium");
+            this.icons[4] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterMolybdenum");
+            this.icons[5] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterNaquadah");
+            this.icons[6] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterNeodymium");
+            this.icons[7] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterNickel");
+            this.icons[8] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterPalladium");
+            this.icons[9] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterPlatinum");
+            this.icons[10] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterThorium");
+            this.icons[11] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterTungsten");
+            this.icons[12] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterUranium235");
+            this.icons[13] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterUranium238");
+            this.icons[14] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterZinc");
+    }
 
     @Override
     public IIcon getIconFromDamage(int meta)
@@ -24,26 +43,6 @@ public class ItemCluster extends ItemIFC {
             meta = 0;
 
         return this.icons[meta];
-    }
-
-    @Override
-    public void registerIcons(IIconRegister regIcon)
-    {
-        this.icons[0] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterAluminium");
-        this.icons[1] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterBeryllium");
-        this.icons[2] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterCobalt");
-        this.icons[3] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterIridium");
-        this.icons[4] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterMolybdenum");
-        this.icons[5] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterNaquadah");
-        this.icons[6] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterNeodymium");
-        this.icons[7] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterNickel");
-        this.icons[8] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterPalladium");
-        this.icons[9] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterPlatinum");
-        this.icons[10] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterThorium");
-        this.icons[11] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterTungsten");
-        this.icons[12] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterUranium235");
-        this.icons[13] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterUranium238");
-        this.icons[14] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterZinc");
     }
 
     @SuppressWarnings({"rawtypes", "unchecked"})

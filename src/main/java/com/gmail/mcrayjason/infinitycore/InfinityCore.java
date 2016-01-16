@@ -1,5 +1,6 @@
 package com.gmail.mcrayjason.infinitycore;
 
+import com.gmail.mcrayjason.infinitycore.compatibility.CrossModCompat;
 import com.gmail.mcrayjason.infinitycore.init.ModBlocks;
 import com.gmail.mcrayjason.infinitycore.init.ModItems;
 import com.gmail.mcrayjason.infinitycore.init.Recipes;
@@ -10,7 +11,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:gregtech")
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:gregtech; after:Thaumcraft")
 public class InfinityCore
 {
     @SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.COMMON_PROXY)
@@ -24,6 +25,7 @@ public class InfinityCore
     {
         ModItems.registerItems();
         ModBlocks.registerBlocks();
+        CrossModCompat.sendIMCMessages();
     }
 
     @Mod.EventHandler

@@ -1,4 +1,5 @@
-item.rodWooden.name=Wooden Rod
+item.itemMaterial.0.name=Wooden Rod
+item.itemMaterial.1.name=Enderium Base Nugget
 item.itemCluster.0.name=Native Aluminium Cluster
 item.itemCluster.1.name=Native Beryllium Cluster
 item.itemCluster.2.name=Native Cobalt Cluster
@@ -14,6 +15,7 @@ item.itemCluster.11.name=Native Tungsten Cluster
 item.itemCluster.12.name=Native Uranium 235 Cluster
 item.itemCluster.13.name=Native Uranium 238 Cluster
 item.itemCluster.14.name=Native Zinc Cluster
+item.itemCluster.15.name=Native Cassiterite Cluster
 
 tile.infinityStone.name=Stone of Infinity
 

@@ -1,6 +1,7 @@
 package com.gmail.mcrayjason.infinitycore;
 
 import com.gmail.mcrayjason.infinitycore.compatibility.CrossModCompat;
+import com.gmail.mcrayjason.infinitycore.compatibility.OreDict;
 import com.gmail.mcrayjason.infinitycore.init.ModBlocks;
 import com.gmail.mcrayjason.infinitycore.init.ModItems;
 import com.gmail.mcrayjason.infinitycore.init.Recipes;
@@ -32,6 +33,7 @@ public class InfinityCore
     public void init(FMLInitializationEvent event) // Recipes and such
     {
         Recipes.registerRecipes();
+        OreDict.oreRegister();
     }
 
     @Mod.EventHandler

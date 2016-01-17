@@ -11,7 +11,7 @@ import net.minecraft.util.IIcon;
 import java.util.List;
 
 public class ItemCluster extends ItemIFC {
-    public IIcon[] icons = new IIcon[15];
+    public IIcon[] icons = new IIcon[16];
     public ItemCluster(String name) {
         super(name);
         this.setHasSubtypes(true);
@@ -34,12 +34,13 @@ public class ItemCluster extends ItemIFC {
             this.icons[12] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterUranium235");
             this.icons[13] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterUranium238");
             this.icons[14] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterZinc");
+            this.icons[15] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterCassiterite");
     }
 
     @Override
     public IIcon getIconFromDamage(int meta)
     {
-        if (meta > 14)
+        if (meta > 15)
             meta = 0;
 
         return this.icons[meta];
@@ -49,7 +50,7 @@ public class ItemCluster extends ItemIFC {
     @Override
     public void getSubItems(Item item, CreativeTabs tab, List list)
     {
-        for (int i = 0; i < 15; i ++)
+        for (int i = 0; i < 16; i ++)
         {
             list.add(new ItemStack(item, 1, i));
         }
@@ -58,7 +59,7 @@ public class ItemCluster extends ItemIFC {
     @Override
     public String getUnlocalizedName(ItemStack stack)
     {
-        return this.getUnlocalizedName() + "_" + stack.getItemDamage();
+        return this.getUnlocalizedName() + "." + stack.getItemDamage();
     }
 
     @Override

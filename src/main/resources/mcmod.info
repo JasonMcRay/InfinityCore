@@ -1,0 +1,13 @@
+[{
+  "modid": "InfinityCore",
+  "name": "Infinity Core",
+  "description": "Core mod adding few essential items to InfiTech modpack"",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "updateUrl": "",
+  "authors": ["Jason_McRay"],
+  "credits": "GregoriousT for GregTech, Blood-Asp for GregTech Exp and for helping with code. And rest of the Infinity Team",
+  "parent": "",
+  "screenshots": [],
+  "dependencies": ["gregtech_addon"]
+}]

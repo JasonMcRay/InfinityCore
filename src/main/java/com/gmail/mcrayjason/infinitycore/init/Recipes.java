@@ -16,7 +16,7 @@ public class Recipes
         GameRegistry.addRecipe(new ShapedOreRecipe (new ItemStack(ModItems.itemMaterial, 1, 0),
                 "swf",
                 's', "craftingToolSaw",
-                'w', "plankWood",
+                'w', "plateWood",
                 'f', "craftingToolFile"));
         GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.itemMaterial, 9, 1), "ingotEnderiumBase"));
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack (EnderIO.itemPowderIngot, 1, 6),

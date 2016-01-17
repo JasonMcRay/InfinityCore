@@ -39,6 +39,7 @@ public class InfinityCore
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-
+        System.out.println("Dressing Capes");
+        proxy.cape();
     }
 }

@@ -1,7 +1,7 @@
 [{
   "modid": "InfinityCore",
   "name": "Infinity Core",
-  "description": "Core mod adding few essential items to InfiTech modpack"",
+  "description": "Core mod adding few essential items to InfiTech modpack",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "updateUrl": "",

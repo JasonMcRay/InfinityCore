@@ -13,6 +13,7 @@ public class Recipes
 {
     public static void registerRecipes()
     {
+        // Crafting Recipes
         GameRegistry.addRecipe(new ShapedOreRecipe (new ItemStack(ModItems.itemMaterial, 1, 0),
                 "swf",
                 's', "craftingToolSaw",
@@ -24,6 +25,8 @@ public class Recipes
                 "nnn",
                 "nnn",
                 'n', "nuggetEnderiumBase"));
+
+        // Smelting Recipes
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 1),(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Beryllium, 2L)), 0F);
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 2),(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Cobalt, 2L)), 0F);
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 3),(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Iridium, 2L)), 0F);

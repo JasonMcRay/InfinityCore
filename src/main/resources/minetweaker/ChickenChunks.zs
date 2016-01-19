@@ -4,7 +4,7 @@ import mods.gregtech.Assembler;
 var chunkLoader = <ChickenChunks:chickenChunkLoader>;
 var spotLoader = <ChickenChunks:chickenChunkLoader:1>;
 var enchantingTable = <minecraft:enchanting_table>;
-var chunkloaderUpgrade = <minecraft:dirt>;
+var chunkloaderUpgrade = <OpenComputers:item:62>;
 var moltenEnderium = <liquid:molten.enderium>;
 
 recipes.remove(chunkLoader);

@@ -1,6 +1,10 @@
 package com.gmail.mcrayjason.infinitycore.compatibility;
 
+import com.gmail.mcrayjason.infinitycore.InfinityCore;
+import com.gmail.mcrayjason.infinitycore.helpers.LogHelper;
 import com.gmail.mcrayjason.infinitycore.init.ModItems;
+import com.google.common.base.Charsets;
+import com.google.common.io.Resources;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.event.FMLInterModComms;
 import gregtech.api.GregTech_API;
@@ -10,18 +14,43 @@ import gregtech.api.util.GT_OreDictUnificator;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
 import thaumcraft.api.ItemApi;
+
+import java.io.IOException;
 
 
 public class CrossModCompat
 {
     public static void sendIMCMessages()
     {
-        if (Loader.isModLoaded("Thaumcraft"))
-        sendThaumcraftIMC();
+        if (Loader.isModLoaded("Thaumcraft")) {
+            sendThaumcraftIMC();
+        }
+        if (Loader.isModLoaded("ChickenChunks")) {
+            gregifyChickenchunks();
+        }
     }
+
+    public static void gregifyChickenchunks()
+    {
+        LogHelper.info("ChickenChunks Detected. Gregifying recipes");
+        try {
+            String data = Resources.toString(Resources.getResource(InfinityCore.class, "/minetweaker/ChickenChunks.zs"), Charsets.UTF_8);
+            NBTTagCompound nbtData = new NBTTagCompound();
+            nbtData.setString("name", "ChickenChunks.zs");
+            nbtData.setString("content", data);
+            FMLInterModComms.sendMessage("MineTweaker3", "addMineTweakerScript", nbtData);
+        }
+        catch (IOException ex)
+        {
+            ex.printStackTrace();
+        }
+    }
+
     public static void sendThaumcraftIMC()
         {
+            LogHelper.info("Adding Clusters to GregTech ores");
             // Our Clusters
             // Aluminium Clusters
             FMLInterModComms.sendMessage("Thaumcraft", "nativeCluster", Block.getIdFromBlock(GregTech_API.sBlockOres1) + "," + GT_OreDictUnificator.get(OrePrefixes.ore, Materials.Aluminium, 1L).getItemDamage() + "," + Item.getIdFromItem(ModItems.itemCluster) + "," + 0 + ",1.0");

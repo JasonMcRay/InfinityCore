@@ -25,5 +25,6 @@ public class OreDict
         OreDictionary.registerOre("clusterUranium", new ItemStack(ModItems.itemCluster, 1, 13));
         OreDictionary.registerOre("clusterZinc", new ItemStack(ModItems.itemCluster, 1, 14));
         OreDictionary.registerOre("clusterCassiterite", new ItemStack(ModItems.itemCluster, 1, 15));
+        OreDictionary.registerOre("plateIronCompressed", new ItemStack(ModItems.itemMaterial, 1, 2));
     }
 }

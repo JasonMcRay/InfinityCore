@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ItemMaterial extends ItemIFC
 {
-    public IIcon[] icons = new IIcon[3];
+    public IIcon[] icons = new IIcon[4];
     public ItemMaterial(String name) {
         super(name);
         this.setHasSubtypes(true);
@@ -22,12 +22,13 @@ public class ItemMaterial extends ItemIFC
         this.icons[0] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "rodWooden");
         this.icons[1] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "nuggetEnderiumBase");
         this.icons[2] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "plateIronCompressed");
+        this.icons[3] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "stickIronCompressed");
     }
 
     @Override
     public IIcon getIconFromDamage(int meta)
     {
-        if (meta > 2)
+        if (meta > 3)
             meta = 0;
 
         return this.icons[meta];
@@ -37,7 +38,7 @@ public class ItemMaterial extends ItemIFC
     @Override
     public void getSubItems(Item item, CreativeTabs tab, List list)
     {
-        for (int i = 0; i < 3; i ++)
+        for (int i = 0; i < 4; i ++)
         {
             list.add(new ItemStack(item, 1, i));
         }

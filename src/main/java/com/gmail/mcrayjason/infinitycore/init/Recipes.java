@@ -29,7 +29,6 @@ public class Recipes
         // Smelting Recipes
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 1),(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Beryllium, 2L)), 0F);
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 2),(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Cobalt, 2L)), 0F);
-        GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 3),(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Iridium, 2L)), 0F);
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 4),(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Molybdenum, 2L)), 0F);
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 7),(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Nickel, 2L)), 0F);
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 9),(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Platinum, 2L)), 0F);

@@ -27,5 +27,8 @@ public class OreDict
         OreDictionary.registerOre("clusterCassiterite", new ItemStack(ModItems.itemCluster, 1, 15));
         OreDictionary.registerOre("plateIronCompressed", new ItemStack(ModItems.itemMaterial, 1, 2));
         OreDictionary.registerOre("stickIronCompressed", new ItemStack(ModItems.itemMaterial, 1, 3));
+        OreDictionary.registerOre("ringIronCompressed", new ItemStack(ModItems.itemMaterial, 1, 4));
+        OreDictionary.registerOre("boltIronCompressed", new ItemStack(ModItems.itemMaterial, 1, 5));
+        OreDictionary.registerOre("screwIronCompressed", new ItemStack(ModItems.itemMaterial, 1, 6));
     }
 }

@@ -7,6 +7,12 @@ item.itemMaterial.4.name=Compressed Iron Ring
 item.itemMaterial.5.name=Compressed Iron Bolt
 item.itemMaterial.6.name=Compressed Iron Screw
 
+// Blocks
+tile.pneumaticHull.name=Pneumatic Hull
+tile.pneumaticHullAdvanced.name=Advanced Pneumatic Hull
+tile.pneumaticCasing.name=Pneumatic Casing
+tile.pneumaticCasingAdvanced.name=Advanced Pneumatic Casing
+
 // Clusters
 item.itemCluster.0.name=Native Aluminium Cluster
 item.itemCluster.1.name=Native Beryllium Cluster

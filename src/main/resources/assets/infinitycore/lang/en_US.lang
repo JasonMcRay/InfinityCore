@@ -6,6 +6,9 @@ item.itemMaterial.3.name=Compressed Iron Rod
 item.itemMaterial.4.name=Compressed Iron Ring
 item.itemMaterial.5.name=Compressed Iron Bolt
 item.itemMaterial.6.name=Compressed Iron Screw
+item.itemMaterial.7.name=Compressed Iron Dust
+item.itemMaterial.8.name=Small Compressed Iron Dust
+item.itemMaterial.9.name=Tiny Compressed Iron Dust
 
 // Blocks
 tile.pneumaticHull.name=Pneumatic Hull

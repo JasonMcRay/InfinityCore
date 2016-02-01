@@ -33,5 +33,6 @@ public class OreDict
         OreDictionary.registerOre("dustIronCompressed", new ItemStack(ModItems.itemMaterial, 1, 7));
         OreDictionary.registerOre("dustSmallIronCompressed", new ItemStack(ModItems.itemMaterial, 1, 8));
         OreDictionary.registerOre("dustTinyIronCompressed", new ItemStack(ModItems.itemMaterial, 1, 9));
+        OreDictionary.registerOre("plateVoid", new ItemStack(ModItems.itemMaterial, 1, 10));
     }
 }

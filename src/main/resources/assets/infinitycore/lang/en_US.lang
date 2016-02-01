@@ -9,6 +9,7 @@ item.itemMaterial.6.name=Compressed Iron Screw
 item.itemMaterial.7.name=Compressed Iron Dust
 item.itemMaterial.8.name=Small Compressed Iron Dust
 item.itemMaterial.9.name=Tiny Compressed Iron Dust
+item.itemMaterial.10.name=Void Metal Plate
 
 // Blocks
 tile.pneumaticHull.name=Pneumatic Hull

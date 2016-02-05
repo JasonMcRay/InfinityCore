@@ -10,6 +10,8 @@ item.itemMaterial.7.name=Compressed Iron Dust
 item.itemMaterial.8.name=Small Compressed Iron Dust
 item.itemMaterial.9.name=Tiny Compressed Iron Dust
 item.itemMaterial.10.name=Void Metal Plate
+item.itemMaterial.11.name=Epoxy Coated Plastic
+item.itemMaterial.12.name=Hot Galgadorian Metal
 
 // Items
 item.droneFrame.name=Drone Case (Rotor)

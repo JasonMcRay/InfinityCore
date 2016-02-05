@@ -7,14 +7,14 @@ import org.apache.logging.log4j.Level;
 
 public class LogHelper
 {
-    public static void log(Level logLevel, Object object){FMLLog.log(Reference.NAME, logLevel, String.valueOf(object));}
+    public static void log(Level logLevel, String format, Object... data){FMLLog.log(Reference.NAME, logLevel, format, data);}
+    public static void log(Level level, Throwable throwable, String format, Object... data) {FMLLog.log(Reference.NAME, level, throwable, format, data);}
 
-    public static void all(Object object) {log(Level.ALL, object);}
-    public static void debug(Object object){log(Level.DEBUG, object);}
-    public static void error(Object object){log(Level.ERROR, object);}
-    public static void fatal(Object object){log(Level.FATAL, object);}
-    public static void info(Object object){log(Level.INFO, object);}
-    public static void off(Object object){log(Level.OFF, object);}
-    public static void trace(Object object){log(Level.TRACE, object);}
-    public static void warn(Object object){log(Level.WARN, object);}
+    public static void fatal(String format, Object... data) {log(Level.FATAL, format, data);}
+    public static void fatal(Throwable throwable, String format, Object... data) {log(Level.FATAL, throwable, format, data);}
+    public static void error(String format, Object... data) {log(Level.ERROR, format, data);}
+    public static void error(Throwable throwable, String format,Object... data) {log(Level.ERROR, throwable, format, data);}
+    public static void warn(String format, Object... data) {log(Level.WARN, format, data);}
+    public static void info(String format, Object... data) {log(Level.INFO, format, data);}
+    public static void debug(String format, Object... data) {log(Level.DEBUG, format, data);}
 }

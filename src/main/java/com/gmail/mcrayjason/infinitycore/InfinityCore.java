@@ -13,7 +13,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:gregtech; after:Thaumcraft")
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:gregtech; after:Thaumcraft; after:PneumaticCraft")
 public class InfinityCore
 {
     @SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.COMMON_PROXY)
@@ -34,6 +34,7 @@ public class InfinityCore
     public void init(FMLInitializationEvent event) // Recipes and such
     {
         Recipes.registerRecipes();
+        Recipes.removeCraftingRecipes();
         OreDict.oreRegister();
     }
 

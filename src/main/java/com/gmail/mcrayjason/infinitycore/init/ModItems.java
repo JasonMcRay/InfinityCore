@@ -11,10 +11,12 @@ public class ModItems
 {
     public static Item itemCluster = new ItemCluster("itemCluster");
     public static Item itemMaterial = new ItemMaterial("itemMaterial");
+    public static Item droneFrame = new ItemIFC("droneFrame");
 
     public static void registerItems()
     {
         RegisterHelper.registerItem(itemCluster);
         RegisterHelper.registerItem(itemMaterial);
+        RegisterHelper.registerItem(droneFrame);
     }
 }

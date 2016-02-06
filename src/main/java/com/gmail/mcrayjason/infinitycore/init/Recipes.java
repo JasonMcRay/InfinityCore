@@ -10,6 +10,7 @@ import gregtech.api.enums.OrePrefixes;
 import gregtech.api.util.GT_OreDictUnificator;
 import li.cil.oc.api.API;
 import li.cil.oc.api.detail.ItemAPI;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
@@ -60,6 +61,9 @@ public class Recipes {
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.itemMaterial, 1, 14),
                 "f  ", " s ",
                 'f', "craftingToolFile", 's', "sandstone"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.itemMaterial, 1, 15),
+                "f  ", " h ",
+                'f', "craftingToolFile", 'h', new ItemStack(Blocks.hardened_clay)));
 
 
         // GregTech Processing Recipes

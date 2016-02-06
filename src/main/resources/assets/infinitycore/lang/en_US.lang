@@ -12,6 +12,8 @@ item.itemMaterial.9.name=Tiny Compressed Iron Dust
 item.itemMaterial.10.name=Void Metal Plate
 item.itemMaterial.11.name=Epoxy Coated Plastic
 item.itemMaterial.12.name=Hot Galgadorian Metal
+item.itemMaterial.13.name=Cobblestone Rod
+item.itemMaterial.14.name=Sandstone Rod
 
 // Items
 item.droneFrame.name=Drone Case (Rotor)

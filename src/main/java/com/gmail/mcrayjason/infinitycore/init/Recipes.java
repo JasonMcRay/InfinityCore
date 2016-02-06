@@ -54,6 +54,12 @@ public class Recipes {
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.droneFrame),
                 "rer", "mcm", "srS",
                 'r', new ItemStack(Itemss.turbineRotor), 'e', "oc:eeprom", 'm', "oc:ram2", 'c', "oc:droneCase1", 'S', new ItemStack(ModItems.itemMaterial, 1, 6), 's', "craftingToolScrewdriver"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.itemMaterial, 1, 13),
+                "f  ", " c ",
+                'f', "craftingToolFile", 'c', "cobblestone"));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.itemMaterial, 1, 14),
+                "f  ", " s ",
+                'f', "craftingToolFile", 's', "sandstone"));
 
 
         // GregTech Processing Recipes

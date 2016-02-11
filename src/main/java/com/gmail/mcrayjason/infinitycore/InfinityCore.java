@@ -33,8 +33,8 @@ public class InfinityCore
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) // Recipes and such
     {
-        Recipes.registerRecipes();
         Recipes.removeCraftingRecipes();
+        Recipes.registerRecipes();
         OreDict.oreRegister();
     }
 

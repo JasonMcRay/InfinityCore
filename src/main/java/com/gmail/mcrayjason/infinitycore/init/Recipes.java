@@ -64,6 +64,8 @@ public class Recipes {
         GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.itemMaterial, 1, 15),
                 "f  ", " h ",
                 'f', "craftingToolFile", 'h', new ItemStack(Blocks.hardened_clay)));
+        GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.itemMaterial, 1, 16),
+                "toolPot", "listAllwater"));
 
 
         // GregTech Processing Recipes

@@ -30,6 +30,24 @@ public class CrossModCompat
         if (Loader.isModLoaded("ChickenChunks")) {
             gregifyChickenchunks();
         }
+        if (Loader.isModLoaded("NotEnoughItems")) {
+            hideNEIItems();
+        }
+    }
+
+    public static void hideNEIItems()
+    {
+        try {
+        String data = Resources.toString(Resources.getResource(InfinityCore.class, "/minetweaker/InfinityCore.zs"), Charsets.UTF_8);
+        NBTTagCompound nbtData = new NBTTagCompound();
+        nbtData.setString("name", "InfinityCore.zs");
+        nbtData.setString("content", data);
+        FMLInterModComms.sendMessage("MineTweaker3", "addMineTweakerScript", nbtData);
+    }
+        catch (IOException ex)
+        {
+            ex.printStackTrace();
+        }
     }
 
     public static void gregifyChickenchunks()

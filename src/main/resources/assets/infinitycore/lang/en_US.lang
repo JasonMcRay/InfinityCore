@@ -46,4 +46,8 @@ item.itemCluster.15.name=Native Cassiterite Cluster
 
 tile.infinityStone.name=Stone of Infinity
 
+// Dummy Items
+item.itemDummy.0.name=Dummy
+item.itemDummy.1.name=Dummy
+
 itemGroup.infinityCore=Infinity Core

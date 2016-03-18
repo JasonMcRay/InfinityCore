@@ -2,11 +2,13 @@ package com.gmail.mcrayjason.infinitycore;
 
 import com.gmail.mcrayjason.infinitycore.compatibility.CrossModCompat;
 import com.gmail.mcrayjason.infinitycore.compatibility.OreDict;
+import com.gmail.mcrayjason.infinitycore.handlers.EventHandler;
 import com.gmail.mcrayjason.infinitycore.helpers.LogHelper;
 import com.gmail.mcrayjason.infinitycore.init.ModBlocks;
 import com.gmail.mcrayjason.infinitycore.init.ModItems;
 import com.gmail.mcrayjason.infinitycore.init.Recipes;
 import com.gmail.mcrayjason.infinitycore.proxies.CommonProxy;
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -36,6 +38,7 @@ public class InfinityCore
         Recipes.removeCraftingRecipes();
         Recipes.registerRecipes();
         OreDict.oreRegister();
+        FMLCommonHandler.instance().bus().register(new EventHandler());
     }
 
     @Mod.EventHandler

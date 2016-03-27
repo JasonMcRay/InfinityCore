@@ -38,5 +38,7 @@ public class OreDict
         OreDictionary.registerOre("stickSandstone", new ItemStack(ModItems.itemMaterial, 1, 14));
         OreDictionary.registerOre("stickHardenedClay", new ItemStack(ModItems.itemMaterial, 1, 15));
         OreDictionary.registerOre("foodSalt", new ItemStack(ModItems.itemMaterial, 1, 16));
+        OreDictionary.registerOre("dustNaquadah", new ItemStack(ModItems.itemSpecialWG, 1, 0));
+        OreDictionary.registerOre("dustNaquadah", new ItemStack(ModItems.itemSpecialWG, 1, 1));
     }
 }

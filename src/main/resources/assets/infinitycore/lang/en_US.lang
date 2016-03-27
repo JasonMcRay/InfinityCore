@@ -44,6 +44,9 @@ item.itemCluster.13.name=Native Uranium 238 Cluster
 item.itemCluster.14.name=Native Zinc Cluster
 item.itemCluster.15.name=Native Cassiterite Cluster
 
+// Special Items
+item.itemSpecialWG.0.name=Naquadah Dust
+
 tile.infinityStone.name=Stone of Infinity
 
 // Dummy Items

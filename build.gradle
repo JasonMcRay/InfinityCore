@@ -19,10 +19,11 @@ apply plugin: 'forge'
 
 version = "1.3"
 group= "com.gmail.mcrayjason.infinitycore" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+//noinspection GroovyUnusedAssignment
 archivesBaseName = "InfinityCore"
 
 minecraft {
-    version = "1.7.10-10.13.4.1558-1.7.10"
+    version = "1.7.10-10.13.4.1566-1.7.10"
     runDir = "eclipse"
 }
 

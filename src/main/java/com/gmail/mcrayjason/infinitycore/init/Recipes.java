@@ -77,7 +77,7 @@ public class Recipes {
         GT_Values.RA.addChemicalRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Silver, 1L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Platinum, 1L), Materials.Tin.getMolten(288), Materials.EnderiumBase.getMolten(576), null, 100, 300);
         GT_Values.RA.addAssemblerRecipe(new ItemStack(ModItems.droneFrame), new ItemStack(Itemss.printedCircuitBoard), Materials.Plastic.getMolten(144), new ItemStack(Itemss.drone), 600, 120);
         GT_Values.RA.addAssemblerRecipe(new ItemStack(ModItems.droneFrame), GT_OreDictUnificator.get(OrePrefixes.circuit, Materials.Basic, 1L), Materials.Plastic.getMolten(144), new ItemStack(Itemss.logisticsDrone), 200, 30);
-        GT_Values.RA.addChemicalBathRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Plastic, 1L), Materials.Epoxid.getMolten(144), new ItemStack(ModItems.itemMaterial, 1, 11), null, null, new int[] { 9000 }, 400, 10);
+        GT_Values.RA.addChemicalBathRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.Plastic, 1L), Materials.Epoxid.getMolten(144), new ItemStack(ModItems.itemMaterial, 1, 11), null, null, new int[] { 10000 }, 400, 10);
         GT_Values.RA.addFormingPressRecipe(new ItemStack(ModItems.itemMaterial, 1, 11), GT_OreDictUnificator.get(OrePrefixes.foil, Materials.AnnealedCopper, 2L), new ItemStack(Itemss.emptyPCB, 1, 100), 200, 60);
 
         // Smelting Recipes

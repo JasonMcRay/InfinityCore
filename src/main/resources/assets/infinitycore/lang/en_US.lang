@@ -16,6 +16,7 @@ item.itemMaterial.13.name=Cobblestone Rod
 item.itemMaterial.14.name=Sandstone Rod
 item.itemMaterial.15.name=Hardened Clay Rod
 item.itemMaterial.16.name=Edible Salt
+item.itemMaterial.17.name=Balanced Infused Seeds
 
 // Items
 item.droneFrame.name=Drone Case (Rotor)

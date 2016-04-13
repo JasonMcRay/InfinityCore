@@ -20,6 +20,7 @@ item.itemMaterial.17.name=Balanced Infused Seeds
 
 // Items
 item.droneFrame.name=Drone Case (Rotor)
+item.dormantEgg.name=Dormant Dragon Egg
 
 // Blocks
 tile.pneumaticHull.name=Pneumatic Hull
@@ -44,6 +45,13 @@ item.itemCluster.12.name=Native Uranium 235 Cluster
 item.itemCluster.13.name=Native Uranium 238 Cluster
 item.itemCluster.14.name=Native Zinc Cluster
 item.itemCluster.15.name=Native Cassiterite Cluster
+
+// Research Nodes
+tc.research_name.IT_DraconicInfusion=Draconic Infusion
+tc.research_text.IT_DraconicInfusion=[IT] Draconic Resurrection
+
+// Pages
+it.researchPage.draconicInfusion.1=Now that you fully comprehend the intrinsic properties of a basic Dragon Egg shell, you should be able to recreate one with the help of your Draconic Bees and False Life Essence. Infusing Draconic Chunks into a regular egg is not an ideal process, but it should be sufficient as a first step. <LINE>Now all that remains is actually infusing the Dormant Egg with some Dragon Essence.  Unfortunately regular Thaumic Infusion will not be sufficient for this task due to the considerable quantity of Dragon Essence required.
 
 // Special Items
 item.itemSpecialWG.0.name=Naquadah Dust

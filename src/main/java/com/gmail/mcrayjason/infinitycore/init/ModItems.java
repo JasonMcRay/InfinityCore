@@ -12,6 +12,7 @@ public class ModItems
     public static Item droneFrame = new ItemIFC("droneFrame");
     public static Item itemDummy = new ItemIFCDummy("itemDummy");
     public static Item itemSpecialWG = new ItemSpecialWG("itemSpecialWG");
+    public static Item dormantEgg = new ItemDragon("dormantEgg");
 
     public static void registerItems()
     {
@@ -20,5 +21,6 @@ public class ModItems
         RegisterHelper.registerItem(droneFrame);
         RegisterHelper.registerItem(itemDummy);
         RegisterHelper.registerItem(itemSpecialWG);
+        RegisterHelper.registerItem(dormantEgg);
     }
 }

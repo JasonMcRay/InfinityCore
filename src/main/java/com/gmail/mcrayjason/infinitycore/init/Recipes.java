@@ -10,7 +10,11 @@ import gregtech.api.enums.OrePrefixes;
 import gregtech.api.util.GT_OreDictUnificator;
 import li.cil.oc.api.API;
 import li.cil.oc.api.detail.ItemAPI;
+import magicbees.item.types.ResourceType;
+import magicbees.main.Config;
+import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
@@ -19,12 +23,21 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import pneumaticCraft.common.block.Blockss;
 import pneumaticCraft.common.item.Itemss;
+import thaumcraft.api.ThaumcraftApi;
+import thaumcraft.api.aspects.Aspect;
+import thaumcraft.api.aspects.AspectList;
+import thaumcraft.api.crafting.InfusionRecipe;
+import thaumcraft.api.research.ResearchItem;
+import thaumcraft.api.research.ResearchPage;
 
 import java.util.Iterator;
 import java.util.List;
 
 public class Recipes {
     @SuppressWarnings("RedundantArrayCreation")
+
+    public static InfusionRecipe dormantEggInfusion;
+
     public static void registerRecipes() {
         // Crafting Recipes
         // Blocks
@@ -70,7 +83,7 @@ public class Recipes {
 
         // GregTech Processing Recipes
         ItemAPI itemsOC = API.items;
-        GT_Values.RA.addAssemblerRecipe(new ItemStack(ModItems.itemMaterial, 8, 2), ItemList.Circuit_Integrated.getWithDamage(0L, 8L, new Object[0]), new ItemStack(ModBlocks.pneumaticCasing), 50, 16);
+        GT_Values.RA.addAssemblerRecipe(new ItemStack(ModItems.itemMaterial, 8, 2), ItemList.Circuit_Integrated.getWithDamage(0L, 8L), new ItemStack(ModBlocks.pneumaticCasing), 50, 16);
         GT_Values.RA.addAssemblerRecipe(new ItemStack(ModItems.itemMaterial, 4, 2), new ItemStack(Itemss.plastic, 4, 4), new ItemStack(ModBlocks.pneumaticCasingAdvanced), 50, 16);
         GT_Values.RA.addAssemblerRecipe(new ItemStack(ModBlocks.pneumaticCasing), new ItemStack(Blockss.pressureTube, 2), Materials.Plastic.getMolten(288), new ItemStack(ModBlocks.pneumaticHull), 50, 16);
         GT_Values.RA.addAssemblerRecipe(new ItemStack(ModBlocks.pneumaticCasingAdvanced), new ItemStack(Blockss.advancedPressureTube, 2), Materials.Plastic.getMolten(288), new ItemStack(ModBlocks.pneumaticHullAdvanced), 50, 16);
@@ -93,9 +106,31 @@ public class Recipes {
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 15), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Tin, 4L)), 0F);
     }
 
+    public static void registerThaumcraftRecipes() {
+        ItemStack dragonChunk = Config.miscResources.getStackForType(ResourceType.DRAGON_CHUNK);
+        ItemStack falseLifeEssence = Config.miscResources.getStackForType(ResourceType.ESSENCE_FALSE_LIFE);
+
+        dormantEggInfusion = ThaumcraftApi.addInfusionCraftingRecipe("IT_DraconicInfusion", new ItemStack(ModItems.dormantEgg), 15, new AspectList().add(Aspect.ELDRITCH, 32).add(Aspect.BEAST, 16).add(Aspect.MAGIC, 16).add(Aspect.LIFE, 8).add(Aspect.DARKNESS, 16).add(Aspect.FLIGHT, 16).add(Aspect.WEATHER, 16), new ItemStack(Items.egg), new ItemStack[]{ falseLifeEssence, dragonChunk, dragonChunk, dragonChunk, dragonChunk, dragonChunk, dragonChunk, dragonChunk, dragonChunk});
+    }
+
+    public static void addResearches() {
+        ItemStack dragonChunk = Config.miscResources.getStackForType(ResourceType.DRAGON_CHUNK);
+
+        new ResearchItem("IT_DraconicInfusion", "MAGICBEES", new AspectList().add(Aspect.ELDRITCH, 8).add(Aspect.BEAST, 4).add(Aspect.MAGIC, 4).add(Aspect.LIFE, 2).add(Aspect.DARKNESS, 4).add(Aspect.FLIGHT, 4).add(Aspect.WEATHER, 4), 4, -2, 2, new ItemStack(ModItems.dormantEgg))
+        .setPages(new ResearchPage("it.researchPage.draconicInfusion.1"), new ResearchPage(dormantEggInfusion))
+        .setHidden()
+        .setItemTriggers(new ItemStack(Blocks.dragon_egg))
+        .setParents("MB_EssenceLife")
+        .setParentsHidden("GT_MAGICABSORB2")
+        .setConcealed()
+        .setSpecial()
+        .registerResearchItem();
+    }
+
     public static void removeCraftingRecipes() {
         removeRecipe(Itemss.drone);
         removeRecipe(Itemss.logisticsDrone);
+        removeRecipe(Blocks.dragon_egg);
         }
 
     @SuppressWarnings("unchecked")
@@ -114,6 +149,24 @@ public class Recipes {
             }
         }
             LogHelper.info("Removed %d recipes for %s", recipesRemoved, Item.itemRegistry.getNameForObject(output));
+    }
+
+    @SuppressWarnings("unchecked")
+    public static void removeRecipe(Block output) {
+            int recipesRemoved = 0;
+
+        List<IRecipe> recipes = CraftingManager.getInstance().getRecipeList();
+        Iterator<IRecipe> remover = recipes.iterator();
+
+        while (remover.hasNext()) {
+            ItemStack itemstack = remover.next().getRecipeOutput();
+
+            if (itemstack != null && itemstack.getItem() == Item.getItemFromBlock(output) && itemstack.getTagCompound() == null){
+                remover.remove();
+                recipesRemoved++;
+            }
+        }
+            LogHelper.info("Removed %d recipes for %s", recipesRemoved, Block.blockRegistry.getNameForObject(output));
     }
 }
 

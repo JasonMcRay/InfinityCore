@@ -33,9 +33,6 @@ public class CrossModCompat
         if (Loader.isModLoaded("NotEnoughItems")) {
             hideNEIItems();
         }
-        if (Loader.isModLoaded("HardcoreEnderExpansion")) {
-            sendHEEIMC();
-        }
     }
 
     public static void hideNEIItems()
@@ -256,10 +253,6 @@ public class CrossModCompat
             FMLInterModComms.sendMessage("Thaumcraft", "nativeCluster", Block.getIdFromBlock(GregTech_API.sBlockOres1) + "," + GT_OreDictUnificator.get(OrePrefixes.oreBlackgranite, Materials.Cinnabar, 1L).getItemDamage() + "," + Item.getIdFromItem(tcCluster.getItem()) + "," + 21 + ",1.0");
             FMLInterModComms.sendMessage("Thaumcraft", "nativeCluster", Block.getIdFromBlock(GregTech_API.sBlockOres1) + "," + GT_OreDictUnificator.get(OrePrefixes.oreRedgranite, Materials.Cinnabar, 1L).getItemDamage() + "," + Item.getIdFromItem(tcCluster.getItem()) + "," + 21 + ",1.0");
         }
-
-    public static void sendHEEIMC() {
-        FMLInterModComms.sendMessage("HardcoreEnderExpansion", "HEE:DragonEssence:AddRecipe", "{\"input\":{\"id\":\"InfinityCore:dormantEgg\"}, \"output\":{\"id\":\"dragon_egg\"}, \"cost\": 150}");
-    }
 }
 
 

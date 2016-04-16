@@ -27,7 +27,7 @@ public class ItemDragon extends Item {
     public void addInformation(ItemStack itemstack, EntityPlayer player, List info, boolean bool) {
         if (itemstack != null) {
             if (GuiScreen.isShiftKeyDown()) {
-                info.add(EnumChatFormatting.LIGHT_PURPLE + "Needs to be infused with at least 150 Dragon Essence");
+                info.add(EnumChatFormatting.LIGHT_PURPLE + "Needs to be infused with Dragon Essence in Dragon Essence Altar");
         } else {
                 info.add(EnumChatFormatting.WHITE + "<Press SHIFT>");
             }

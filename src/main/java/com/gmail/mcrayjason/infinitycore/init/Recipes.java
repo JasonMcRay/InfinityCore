@@ -36,7 +36,7 @@ import java.util.List;
 public class Recipes {
     @SuppressWarnings("RedundantArrayCreation")
 
-    public static InfusionRecipe dormantEggInfusion;
+    private static InfusionRecipe dormantEggInfusion;
 
     public static void registerRecipes() {
         // Crafting Recipes
@@ -116,7 +116,7 @@ public class Recipes {
     public static void addResearches() {
         ItemStack dragonChunk = Config.miscResources.getStackForType(ResourceType.DRAGON_CHUNK);
 
-        new ResearchItem("IT_DraconicInfusion", "MAGICBEES", new AspectList().add(Aspect.ELDRITCH, 8).add(Aspect.BEAST, 4).add(Aspect.MAGIC, 4).add(Aspect.LIFE, 2).add(Aspect.DARKNESS, 4).add(Aspect.FLIGHT, 4).add(Aspect.WEATHER, 4), 4, -2, 2, new ItemStack(ModItems.dormantEgg))
+        new ResearchItem("IT_DraconicInfusion", "MAGICBEES", new AspectList().add(Aspect.ELDRITCH, 8).add(Aspect.BEAST, 4).add(Aspect.MAGIC, 4).add(Aspect.LIFE, 2).add(Aspect.DARKNESS, 4).add(Aspect.FLIGHT, 4).add(Aspect.WEATHER, 4), 1, 1, 2, new ItemStack(ModItems.dormantEgg))
         .setPages(new ResearchPage("it.researchPage.draconicInfusion.1"), new ResearchPage(dormantEggInfusion))
         .setHidden()
         .setItemTriggers(new ItemStack(Blocks.dragon_egg))
@@ -134,7 +134,7 @@ public class Recipes {
         }
 
     @SuppressWarnings("unchecked")
-    public static void removeRecipe(Item output){
+    private static void removeRecipe(Item output){
             int recipesRemoved = 0;
 
         List<IRecipe> recipes = CraftingManager.getInstance().getRecipeList();
@@ -152,7 +152,7 @@ public class Recipes {
     }
 
     @SuppressWarnings("unchecked")
-    public static void removeRecipe(Block output) {
+    private static void removeRecipe(Block output) {
             int recipesRemoved = 0;
 
         List<IRecipe> recipes = CraftingManager.getInstance().getRecipeList();

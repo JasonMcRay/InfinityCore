@@ -33,10 +33,31 @@ public class CrossModCompat
         if (Loader.isModLoaded("NotEnoughItems")) {
             hideNEIItems();
         }
+        if (Loader.isModLoaded("headcrumbs")) {
+            addPatronHeads();
+        }
     }
 
-    public static void hideNEIItems()
+    private static void addPatronHeads()
     {
+        LogHelper.info("Adding Patreon Heads to the Loot tables. Thank you very much my Patrons!");
+        try {
+        String data = Resources.toString(Resources.getResource(InfinityCore.class, "/minetweaker/PatreonHeads.zs"), Charsets.UTF_8);
+        NBTTagCompound nbtData = new NBTTagCompound();
+        nbtData.setString("name", "PatreonHeads.zs");
+        nbtData.setString("content", data);
+        FMLInterModComms.sendMessage("MineTweaker3", "addMineTweakerScript", nbtData);
+    }
+        catch (IOException ex)
+        {
+            ex.printStackTrace();
+        }
+
+    }
+
+    private static void hideNEIItems()
+    {
+        LogHelper.info("Hiding Dummy Items");
         try {
         String data = Resources.toString(Resources.getResource(InfinityCore.class, "/minetweaker/InfinityCore.zs"), Charsets.UTF_8);
         NBTTagCompound nbtData = new NBTTagCompound();
@@ -50,7 +71,7 @@ public class CrossModCompat
         }
     }
 
-    public static void gregifyChickenchunks()
+    private static void gregifyChickenchunks()
     {
         LogHelper.info("ChickenChunks Detected. Gregifying recipes");
         try {
@@ -66,7 +87,7 @@ public class CrossModCompat
         }
     }
 
-    public static void sendThaumcraftIMC()
+    private static void sendThaumcraftIMC()
         {
             LogHelper.info("Adding Clusters to GregTech ores");
             // Our Clusters

@@ -18,16 +18,32 @@ item.itemMaterial.15.name=Hardened Clay Rod
 item.itemMaterial.16.name=Edible Salt
 item.itemMaterial.17.name=Balanced Infused Seeds
 item.itemMaterial.18.name=Tinplate Steel
+item.itemMaterial.19.name=Chromic Platinum Dust
+item.itemMaterial.20.name=Energetic Alloy Dust
+item.itemMaterial.21.name=Vibrant Alloy Dust
+item.itemMaterial.22.name=Crystalline Seed
 
 // Items
 item.droneFrame.name=Drone Case (Rotor)
 item.dormantEgg.name=Dormant Dragon Egg
+
+// Catalysts
+
+item.itemCatalyst.0.name=Magical Catalyst
+item.itemCatalyst.1.name=Fuel Catalyst
+item.itemCatalyst.2.name=Natural Catalyst
+item.itemCatalyst.3.name=Alloy Catalyst
+item.itemCatalyst.4.name=Crystalline Catalyst
+item.itemCatalyst.5.name=Lesser Metal Catalyst
+item.itemCatalyst.6.name=Precious Metal Catalyst
+item.itemCatalyst.7.name=Greater Metal Catalyst
 
 // Blocks
 tile.pneumaticHull.name=Pneumatic Hull
 tile.pneumaticHullAdvanced.name=Advanced Pneumatic Hull
 tile.pneumaticCasing.name=Pneumatic Casing
 tile.pneumaticCasingAdvanced.name=Advanced Pneumatic Casing
+tile.blockCatalyst.name=Infused D-O-B Egg
 
 // Clusters
 item.itemCluster.0.name=Native Aluminium Cluster
@@ -51,8 +67,21 @@ item.itemCluster.15.name=Native Cassiterite Cluster
 tc.research_name.IT_DraconicInfusion=Draconic Infusion
 tc.research_text.IT_DraconicInfusion=[IT] Draconic Resurrection
 
+tc.research_name.IT_CatalystMagic=Magical Catalyst
+tc.research_text.IT_CatalystMagic=[IT] Magical Combinatory
+tc.research_name.IT_CatalystFuel=Fuel Catalyst
+tc.research_text.IT_CatalystFuel=[IT] Fueling the Mystics
+tc.research_name.IT_CatalystDOB=Ultimate Catalyst
+tc.research_text.IT_CatalystDOB=[IT] Ultimate Bee
+
 // Pages
-it.researchPage.draconicInfusion.1=Now that you fully comprehend the intrinsic properties of a basic Dragon Egg shell, you should be able to recreate one with the help of your Draconic Bees and False Life Essence. Infusing Draconic Chunks into a regular egg is not an ideal process, but it should be sufficient as a first step. <LINE>Now all that remains is actually infusing the Dormant Egg with some Dragon Essence.  Unfortunately regular Thaumic Infusion will not be sufficient for this task due to the considerable quantity of Dragon Essence required.
+it.researchPage.draconicInfusion.1=Now that you fully comprehend the intrinsic properties of a basic Dragon Egg shell, you should be able to recreate one with the help of your Draconic Bees and False Life Essence. Infusing Draconic Chunks into a regular egg is not an ideal process, but it should be sufficient as a first step. <LINE>Now all that remains is actually infusing the Dormant Egg with some Dragon Essence. Unfortunately regular Thaumic Infusion will not be sufficient for this task due to the considerable quantity of Dragon Essence required.
+
+it.researchPage.magicCatalyst.1=This is it, the final step in the art of apimancy lies before you. Take everything you know, all the bees, the genetics, the magic and the science, you'll need all of it for this final step, the creation of a bee unlike any other. <LINE>First you'll need catalysts, powerful items that can be used to refine and sculpt the bee. For one of these catalysts you'll need to infuse the power of every shard into thaumium to create a crystalline matrix, perfect for focusing magical energy into the bee.
+
+it.researchPage.fuelCatalyst.1=PLACEHOLDER!!!!!!!!!
+
+it.researchPage.dobCatalyst.1=PLACEHOLDER!!!!!!!!!
 
 // Special Items
 item.itemSpecialWG.0.name=Naquadah Dust

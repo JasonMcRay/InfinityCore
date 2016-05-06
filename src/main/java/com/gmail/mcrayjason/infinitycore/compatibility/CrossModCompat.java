@@ -2,6 +2,7 @@ package com.gmail.mcrayjason.infinitycore.compatibility;
 
 import com.gmail.mcrayjason.infinitycore.InfinityCore;
 import com.gmail.mcrayjason.infinitycore.helpers.LogHelper;
+import com.gmail.mcrayjason.infinitycore.init.ModBlocks;
 import com.gmail.mcrayjason.infinitycore.init.ModItems;
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
@@ -16,6 +17,9 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import thaumcraft.api.ItemApi;
+import thaumcraft.api.ThaumcraftApi;
+import thaumcraft.api.aspects.Aspect;
+import thaumcraft.api.aspects.AspectList;
 
 import java.io.IOException;
 
@@ -26,6 +30,7 @@ public class CrossModCompat
     {
         if (Loader.isModLoaded("Thaumcraft")) {
             sendThaumcraftIMC();
+            registerAspects();
         }
         if (Loader.isModLoaded("ChickenChunks")) {
             gregifyChickenchunks();
@@ -274,6 +279,18 @@ public class CrossModCompat
             FMLInterModComms.sendMessage("Thaumcraft", "nativeCluster", Block.getIdFromBlock(GregTech_API.sBlockOres1) + "," + GT_OreDictUnificator.get(OrePrefixes.oreBlackgranite, Materials.Cinnabar, 1L).getItemDamage() + "," + Item.getIdFromItem(tcCluster.getItem()) + "," + 21 + ",1.0");
             FMLInterModComms.sendMessage("Thaumcraft", "nativeCluster", Block.getIdFromBlock(GregTech_API.sBlockOres1) + "," + GT_OreDictUnificator.get(OrePrefixes.oreRedgranite, Materials.Cinnabar, 1L).getItemDamage() + "," + Item.getIdFromItem(tcCluster.getItem()) + "," + 21 + ",1.0");
         }
+
+    private static void registerAspects() {
+        ThaumcraftApi.registerObjectTag(new ItemStack(ModItems.itemMaterial, 1, 20), new AspectList().add(Aspect.LIGHT, 2).add(Aspect.ENERGY, 2).add(Aspect.GREED, 2).add(Aspect.SENSES, 1).add(Aspect.MECHANISM, 1).add(Aspect.ENTROPY, 1).add(Aspect.METAL, 2));
+        ThaumcraftApi.registerObjectTag(new ItemStack(ModItems.itemMaterial, 1, 21), new AspectList().add(Aspect.ELDRITCH, 4).add(Aspect.TRAVEL, 4).add(Aspect.MAGIC, 2).add(Aspect.ENERGY, 2).add(Aspect.GREED, 2).add(Aspect.ENTROPY, 1).add(Aspect.METAL, 2));
+        ThaumcraftApi.registerObjectTag(new ItemStack(ModItems.itemMaterial, 1, 19), new AspectList().add(Aspect.ENTROPY, 1).add(Aspect.MECHANISM, 1).add(Aspect.METAL, 4).add(Aspect.getAspect("nebrisum"), 1));
+        ThaumcraftApi.registerObjectTag(new ItemStack(ModItems.itemCatalyst, 1, 2), new AspectList().add(Aspect.EARTH, 1).add(Aspect.ENTROPY, 1).add(Aspect.PLANT, 4).add(Aspect.MOTION, 4));
+        ThaumcraftApi.registerObjectTag(new ItemStack(ModItems.itemCatalyst, 1, 3), new AspectList().add(Aspect.METAL, 6).add(Aspect.ENTROPY, 1).add(Aspect.ORDER, 1).add(Aspect.MOTION, 4).add(Aspect.LIGHT, 2).add(Aspect.ENERGY, 4).add(Aspect.GREED, 4).add(Aspect.SENSES, 1).add(Aspect.ELDRITCH, 4).add(Aspect.MECHANISM, 4).add(Aspect.MAGIC, 2));
+        ThaumcraftApi.registerObjectTag(new ItemStack(ModItems.itemCatalyst, 1, 4), new AspectList().add(Aspect.CRYSTAL, 15).add(Aspect.GREED, 14).add(Aspect.TAINT, 2).add(Aspect.POISON, 4));
+        ThaumcraftApi.registerObjectTag(new ItemStack(ModItems.itemCatalyst, 1, 5), new AspectList().add(Aspect.METAL, 9).add(Aspect.ENTROPY, 1).add(Aspect.CRYSTAL, 1).add(Aspect.EXCHANGE, 1).add(Aspect.FIRE, 1).add(Aspect.HEAL, 1).add(Aspect.ORDER, 1));
+        ThaumcraftApi.registerObjectTag(new ItemStack(ModItems.itemCatalyst, 1, 6), new AspectList().add(Aspect.METAL, 7).add(Aspect.ENTROPY, 1).add(Aspect.MECHANISM, 2).add(Aspect.GREED, 1).add(Aspect.getAspect("nebrisum"), 2));
+        ThaumcraftApi.registerObjectTag(new ItemStack(ModItems.itemCatalyst, 1, 7), new AspectList().add(Aspect.ENTROPY, 1).add(Aspect.METAL, 10).add(Aspect.ARMOR, 2).add(Aspect.FLIGHT, 1));
+    }
 }
 
 

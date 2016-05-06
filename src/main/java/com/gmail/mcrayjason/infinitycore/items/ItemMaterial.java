@@ -11,7 +11,7 @@ import java.util.List;
 
 public class ItemMaterial extends ItemIFC
 {
-    int itemCount = 19;
+    int itemCount = 23;
 
     public IIcon[] icons = new IIcon[itemCount];
     public ItemMaterial(String name) {
@@ -40,6 +40,10 @@ public class ItemMaterial extends ItemIFC
         this.icons[16] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "foodSalt");
         this.icons[17] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "seedsBalancedInfused");
         this.icons[18] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "tinplateSteel");
+        this.icons[19] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "dustChromicPlatinum");
+        this.icons[20] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "dustEnergeticAlloy");
+        this.icons[21] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "dustVibrantAlloy");
+        this.icons[22] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "crystallineSeed");
     }
 
     @Override

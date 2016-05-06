@@ -39,6 +39,9 @@ public class OreDict
         OreDictionary.registerOre("stickHardenedClay", new ItemStack(ModItems.itemMaterial, 1, 15));
         OreDictionary.registerOre("foodSalt", new ItemStack(ModItems.itemMaterial, 1, 16));
         OreDictionary.registerOre("dustNaquadah", new ItemStack(ModItems.itemSpecialWG, 1, 0));
-        OreDictionary.registerOre("dustNaquadah", new ItemStack(ModItems.itemSpecialWG, 1, 1));
+        OreDictionary.registerOre("dustEnergeticAlloy", new ItemStack(ModItems.itemMaterial, 1, 20));
+        OreDictionary.registerOre("dustVibrantAlloy", new ItemStack(ModItems.itemMaterial, 1, 21));
+        OreDictionary.registerOre("dustPhasedGold", new ItemStack(ModItems.itemMaterial, 1, 21));
+        OreDictionary.registerOre("dustChromicPlatinum", new ItemStack(ModItems.itemMaterial, 1, 19));
     }
 }

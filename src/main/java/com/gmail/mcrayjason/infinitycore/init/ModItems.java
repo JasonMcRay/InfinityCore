@@ -13,6 +13,7 @@ public class ModItems
     public static Item itemDummy = new ItemIFCDummy("itemDummy");
     public static Item itemSpecialWG = new ItemSpecialWG("itemSpecialWG");
     public static Item dormantEgg = new ItemDragon("dormantEgg");
+    public static Item itemCatalyst = new ItemCatalyst("itemCatalyst");
 
     public static void registerItems()
     {
@@ -22,5 +23,6 @@ public class ModItems
         RegisterHelper.registerItem(itemDummy);
         RegisterHelper.registerItem(itemSpecialWG);
         RegisterHelper.registerItem(dormantEgg);
+        RegisterHelper.registerItem(itemCatalyst);
     }
 }

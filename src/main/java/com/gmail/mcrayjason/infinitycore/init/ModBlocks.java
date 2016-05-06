@@ -1,5 +1,6 @@
 package com.gmail.mcrayjason.infinitycore.init;
 
+import com.gmail.mcrayjason.infinitycore.blocks.BlockCatalyst;
 import com.gmail.mcrayjason.infinitycore.blocks.BlockHull;
 import com.gmail.mcrayjason.infinitycore.blocks.BlockIFC;
 import com.gmail.mcrayjason.infinitycore.blocks.BlockMachine;
@@ -13,8 +14,7 @@ public class ModBlocks
     public static Block pneumaticCasingAdvanced = new BlockMachine("pneumaticCasingAdvanced");
     public static Block pneumaticHull = new BlockHull("pneumaticHull");
     public static Block pneumaticHullAdvanced = new BlockHull("pneumaticHullAdvanced");
-
-
+    public static Block blockCatalyst = new BlockCatalyst("blockCatalyst");
 
     public static void registerBlocks()
     {
@@ -23,5 +23,6 @@ public class ModBlocks
         RegisterHelper.registerBlock(pneumaticCasingAdvanced);
         RegisterHelper.registerBlock(pneumaticHull);
         RegisterHelper.registerBlock(pneumaticHullAdvanced);
+        RegisterHelper.registerBlock(blockCatalyst);
     }
 }

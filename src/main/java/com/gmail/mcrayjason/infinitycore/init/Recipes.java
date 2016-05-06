@@ -177,7 +177,7 @@ public class Recipes {
         new ResearchItem("IT_CatalystDOB", "MAGICBEES", new AspectList(), 4, -4, 3, new ItemStack(ModBlocks.blockCatalyst))
                 .setPages(new ResearchPage("it.researchPage.dobCatalyst.1"), new ResearchPage(dobCatalystInfusion))
                 .setParents("IT_CatalystFuel", "IT_CatalystMagic")
-//              .setParentsHidden("IT_MagicCataReq", "IT_FuelCataReq", "IT_NatureCataReq", "IT_AlloyCataReq", "IT_CrystalCataReq", "IT_LesserCataReq", "IT_PreciousCataReq", "IT_GreaterCataReq")
+                .setParentsHidden("IT_MagicCataReq", "IT_FuelCataReq", "IT_NatureCataReq", "IT_AlloyCataReq", "IT_CrystalCataReq", "IT_LesserCataReq", "IT_PreciousCataReq", "IT_GreaterCataReq")
                 .setConcealed()
                 .setSpecial()
                 .registerResearchItem();
@@ -197,7 +197,7 @@ public class Recipes {
         new ResearchItem("IT_NaquadahReq", "MAGICBEES").setLost().setItemTriggers(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Naquadah, 1L)).setVirtual();
         new ResearchItem("IT_CarbonReq", "MAGICBEES").setLost().setItemTriggers(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Carbon, 1L)).setVirtual();
         new ResearchItem("IT_RedstoneReq", "MAGICBEES").setLost().setItemTriggers(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Redstone, 1L)).setVirtual();
-/*
+
         new ResearchItem("IT_MagicCataReq", "MAGICBEES").setLost().setItemTriggers(new ItemStack(ModItems.itemCatalyst, 1, 0)).setVirtual();
         new ResearchItem("IT_FuelCataReq", "MAGICBEES").setLost().setItemTriggers(new ItemStack(ModItems.itemCatalyst, 1, 1)).setVirtual();
         new ResearchItem("IT_NatureCataReq", "MAGICBEES").setLost().setItemTriggers(new ItemStack(ModItems.itemCatalyst, 1, 2)).setVirtual();
@@ -206,7 +206,7 @@ public class Recipes {
         new ResearchItem("IT_LesserCataReq", "MAGICBEES").setLost().setItemTriggers(new ItemStack(ModItems.itemCatalyst, 1, 5)).setVirtual();
         new ResearchItem("IT_PreciousCataReq", "MAGICBEES").setLost().setItemTriggers(new ItemStack(ModItems.itemCatalyst, 1, 6)).setVirtual();
         new ResearchItem("IT_GreaterCataReq", "MAGICBEES").setLost().setItemTriggers(new ItemStack(ModItems.itemCatalyst, 1, 7)).setVirtual();
-*/
+
     }
 
     public static void removeCraftingRecipes() {

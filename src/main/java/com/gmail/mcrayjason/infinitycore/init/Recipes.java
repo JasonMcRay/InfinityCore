@@ -170,7 +170,7 @@ public class Recipes {
 
         new ResearchItem("IT_CatalystFuel", "MAGICBEES", new AspectList().add(Aspect.FIRE, 5).add(Aspect.ENERGY, 5).add(Aspect.EXCHANGE, 5), 5, -3, 3, new ItemStack(ModItems.itemCatalyst, 1, 1))
                 .setPages(new ResearchPage("it.researchPage.fuelCatalyst.1"), new ResearchPage(fuelCatalystInfusion))
-                .setParentsHidden("INFUSION", "IT_LigniteReq", "IT_GT_OreDictUnificator.get(OrePrefixes.gem, Materials.Coal, 1L)Req", "IT_UraniumReq", "IT_NaquadahReq", "IT_CarbonReq", "IT_RedstoneReq")
+                .setParentsHidden("INFUSION", "IT_LigniteReq", "IT_CoalReq", "IT_UraniumReq", "IT_NaquadahReq", "IT_CarbonReq", "IT_RedstoneReq")
                 .setConcealed()
                 .registerResearchItem();
 

@@ -77,11 +77,11 @@ tc.research_text.IT_CatalystDOB=[IT] Ultimate Bee
 // Pages
 it.researchPage.draconicInfusion.1=Now that you fully comprehend the intrinsic properties of a basic Dragon Egg shell, you should be able to recreate one with the help of your Draconic Bees and False Life Essence. Infusing Draconic Chunks into a regular egg is not an ideal process, but it should be sufficient as a first step. <LINE>Now all that remains is actually infusing the Dormant Egg with some Dragon Essence. Unfortunately regular Thaumic Infusion will not be sufficient for this task due to the considerable quantity of Dragon Essence required.
 
-it.researchPage.magicCatalyst.1=This is it, the final step in the art of apimancy lies before you. Take everything you know, all the bees, the genetics, the magic and the science, you'll need all of it for this final step, the creation of a bee unlike any other. <LINE>First you'll need catalysts, powerful items that can be used to refine and sculpt the bee. For one of these catalysts you'll need to infuse the power of every shard into thaumium to create a crystalline matrix, perfect for focusing magical energy into the bee.
+it.researchPage.magicCatalyst.1=This is it, the final step in the art of apimancy lies before you. Take everything you know, all the bees, the genetics, the magic and the science, you'll need all of it for this final step, the creation of a bee unlike any other. First you'll need catalysts, powerful items that can be used to refine and sculpt the bee. <LINE> For one of these catalysts you'll need to infuse the power of every shard into thaumium to create a crystalline matrix, perfect for focusing magical energy into the bee, for another you'll need the most potent fuel source ever created to enrich the bee.
 
-it.researchPage.fuelCatalyst.1=PLACEHOLDER!!!!!!!!!
+it.researchPage.fuelCatalyst.1=This is it, the final step in the art of apimancy lies before you. Take everything you know, all the bees, the genetics, the magic and the science, you'll need all of it for this final step, the creation of a bee unlike any other. First you'll need catalysts, powerful items that can be used to refine and sculpt the bee. <LINE> For one of these catalysts you'll need to infuse the power of every shard into thaumium to create a crystalline matrix, perfect for focusing magical energy into the bee, for another you'll need the most potent fuel source ever created to enrich the bee.
 
-it.researchPage.dobCatalyst.1=PLACEHOLDER!!!!!!!!!
+it.researchPage.dobCatalyst.1=Having completed the penultimate step you can now create the Infused D-O-B Egg, take all the catalysts, the metals and magic, the plants and power, and infuse them all into a dragon egg to gain the key to the bee.
 
 // Special Items
 item.itemSpecialWG.0.name=Naquadah Dust

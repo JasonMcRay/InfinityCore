@@ -46,7 +46,6 @@ public class InfinityCore
         Recipes.removeCraftingRecipes();
         Recipes.registerThaumcraftRecipes();
         Recipes.addResearches();
-        LogHelper.info("Dressing Capes");
         proxy.cape();
     }
 }

@@ -1,5 +1,6 @@
 package com.gmail.mcrayjason.infinitycore.proxies;
 
+import com.gmail.mcrayjason.infinitycore.helpers.LogHelper;
 import com.jadarstudios.developercapes.DevCapes;
 
 public class ClientProxy extends CommonProxy
@@ -12,6 +13,9 @@ public class ClientProxy extends CommonProxy
     @SuppressWarnings("deprecation")
     public void cape()
     {
-        DevCapes.getInstance().registerConfig("https://www.dropbox.com/s/73chwh31nk3jxgr/capes.json?raw=1", "InfinityCore");
+        LogHelper.info("Dressing Capes");
+        DevCapes.getInstance().registerConfig("https://gist.githubusercontent.com/JasonMcRay/6b0f52ef900be6fb24694e9ea6b5c7cd/raw/", "InfinityCore");
+        LogHelper.info("Capes Dressed");
+
     }
 }

@@ -12,9 +12,9 @@ import java.util.List;
 
 public class ItemIFCDummy extends ItemIFC
 {
-    int itemCount = 2;
+    private int itemCount = 6;
 
-    public IIcon[] icons = new IIcon[itemCount];
+    private IIcon[] icons = new IIcon[itemCount];
     public ItemIFCDummy(String name) {
         super(name);
         this.setHasSubtypes(true);
@@ -25,6 +25,10 @@ public class ItemIFCDummy extends ItemIFC
     {
         this.icons[0] = regIcon.registerIcon(Reference.MODID + ":" + "dummy/" + "permutatio");
         this.icons[1] = regIcon.registerIcon(Reference.MODID + ":" + "dummy/" + "electrum");
+        this.icons[2] = regIcon.registerIcon(Reference.MODID + ":" + "dummy/" + "elSaw");
+        this.icons[3] = regIcon.registerIcon(Reference.MODID + ":" + "dummy/" + "elWrench");
+        this.icons[4] = regIcon.registerIcon(Reference.MODID + ":" + "dummy/" + "elBuzzsaw");
+        this.icons[5] = regIcon.registerIcon(Reference.MODID + ":" + "dummy/" + "elScrewdriver");
     }
 
     @Override

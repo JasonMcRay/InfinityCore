@@ -91,5 +91,9 @@ tile.infinityStone.name=Stone of Infinity
 // Dummy Items
 item.itemDummy.0.name=Dummy
 item.itemDummy.1.name=Dummy
+item.itemDummy.2.name=Electric Chainsaw
+item.itemDummy.3.name=Electric Wrench
+item.itemDummy.4.name=Electric Buzzsaw
+item.itemDummy.5.name=Electric Screwdriver
 
 itemGroup.infinityCore=Infinity Core

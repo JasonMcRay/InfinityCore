@@ -43,9 +43,9 @@ public class OreDict
         OreDictionary.registerOre("dustVibrantAlloy", new ItemStack(ModItems.itemMaterial, 1, 21));
         OreDictionary.registerOre("dustPhasedGold", new ItemStack(ModItems.itemMaterial, 1, 21));
         OreDictionary.registerOre("dustChromicPlatinum", new ItemStack(ModItems.itemMaterial, 1, 19));
-        OreDictionary.registerOre("craftingToolElectricSaw", new ItemStack(ModItems.itemDummy, 1, 3));
-        OreDictionary.registerOre("craftingToolElectricWrench", new ItemStack(ModItems.itemDummy, 1, 4));
-        OreDictionary.registerOre("craftingToolElectricBuzzsaw", new ItemStack(ModItems.itemDummy, 1, 5));
-        OreDictionary.registerOre("craftingToolElectricScrewdriver", new ItemStack(ModItems.itemDummy, 1, 6));
+        OreDictionary.registerOre("craftingToolElectricSaw", new ItemStack(ModItems.itemDummy, 1, 2));
+        OreDictionary.registerOre("craftingToolElectricWrench", new ItemStack(ModItems.itemDummy, 1, 3));
+        OreDictionary.registerOre("craftingToolElectricBuzzsaw", new ItemStack(ModItems.itemDummy, 1, 4));
+        OreDictionary.registerOre("craftingToolElectricScrewdriver", new ItemStack(ModItems.itemDummy, 1, 5));
     }
 }

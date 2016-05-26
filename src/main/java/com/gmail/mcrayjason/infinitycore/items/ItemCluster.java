@@ -10,7 +10,10 @@ import net.minecraft.util.IIcon;
 import java.util.List;
 
 public class ItemCluster extends ItemIFC {
-    public IIcon[] icons = new IIcon[16];
+
+    private int itemCount = 17;
+
+    private IIcon[] icons = new IIcon[itemCount];
     public ItemCluster(String name) {
         super(name);
         this.setHasSubtypes(true);
@@ -34,12 +37,13 @@ public class ItemCluster extends ItemIFC {
             this.icons[13] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterUranium238");
             this.icons[14] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterZinc");
             this.icons[15] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterCassiterite");
+            this.icons[16] = regIcon.registerIcon(Reference.MODID + ":" + "cluster/" + "clusterUniversal");
     }
 
     @Override
     public IIcon getIconFromDamage(int meta)
     {
-        if (meta > 15)
+        if (meta > itemCount - 1)
             meta = 0;
 
         return this.icons[meta];
@@ -49,7 +53,7 @@ public class ItemCluster extends ItemIFC {
     @Override
     public void getSubItems(Item item, CreativeTabs tab, List list)
     {
-        for (int i = 0; i < 16; i ++)
+        for (int i = 0; i < itemCount; i ++)
         {
             list.add(new ItemStack(item, 1, i));
         }

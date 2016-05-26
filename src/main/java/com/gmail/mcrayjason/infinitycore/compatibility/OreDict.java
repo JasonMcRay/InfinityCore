@@ -25,6 +25,7 @@ public class OreDict
         OreDictionary.registerOre("clusterUranium", new ItemStack(ModItems.itemCluster, 1, 13));
         OreDictionary.registerOre("clusterZinc", new ItemStack(ModItems.itemCluster, 1, 14));
         OreDictionary.registerOre("clusterCassiterite", new ItemStack(ModItems.itemCluster, 1, 15));
+        OreDictionary.registerOre("clusterUniversal", new ItemStack(ModItems.itemCluster, 1, 16));
         OreDictionary.registerOre("plateIronCompressed", new ItemStack(ModItems.itemMaterial, 1, 2));
         OreDictionary.registerOre("stickIronCompressed", new ItemStack(ModItems.itemMaterial, 1, 3));
         OreDictionary.registerOre("ringIronCompressed", new ItemStack(ModItems.itemMaterial, 1, 4));
@@ -47,5 +48,10 @@ public class OreDict
         OreDictionary.registerOre("craftingToolElectricWrench", new ItemStack(ModItems.itemDummy, 1, 3));
         OreDictionary.registerOre("craftingToolElectricBuzzsaw", new ItemStack(ModItems.itemDummy, 1, 4));
         OreDictionary.registerOre("craftingToolElectricScrewdriver", new ItemStack(ModItems.itemDummy, 1, 5));
+        OreDictionary.registerOre("capInertIchorium", new ItemStack(ModItems.itemKami, 1, 0));
+        OreDictionary.registerOre("ringIchorium", new ItemStack(ModItems.itemKami, 1, 1));
+        OreDictionary.registerOre("threadIchorium", new ItemStack(ModItems.itemKami, 1, 2));
+        OreDictionary.registerOre("threadReinforced", new ItemStack(ModItems.itemKami, 1, 3));
+
     }
 }

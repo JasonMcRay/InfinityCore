@@ -14,6 +14,7 @@ public class ModItems
     public static Item itemSpecialWG = new ItemSpecialWG("itemSpecialWG");
     public static Item dormantEgg = new ItemDragon("dormantEgg");
     public static Item itemCatalyst = new ItemCatalyst("itemCatalyst");
+    public static Item itemKami = new ItemKami("itemKami");
 
     public static void registerItems()
     {
@@ -24,5 +25,6 @@ public class ModItems
         RegisterHelper.registerItem(itemSpecialWG);
         RegisterHelper.registerItem(dormantEgg);
         RegisterHelper.registerItem(itemCatalyst);
+        RegisterHelper.registerItem(itemKami);
     }
 }

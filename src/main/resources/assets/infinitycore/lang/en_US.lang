@@ -62,6 +62,13 @@ item.itemCluster.12.name=Native Uranium 235 Cluster
 item.itemCluster.13.name=Native Uranium 238 Cluster
 item.itemCluster.14.name=Native Zinc Cluster
 item.itemCluster.15.name=Native Cassiterite Cluster
+item.itemCluster.16.name=Universal Native Cluster
+
+// Kami Items
+item.itemKami.0.name=Inert Ichorium Cap
+item.itemKami.1.name=Ichorium Ring
+item.itemKami.2.name=Ichorthread
+item.itemKami.3.name=Reinforced Thread
 
 // Research Nodes
 tc.research_name.IT_DraconicInfusion=Draconic Infusion

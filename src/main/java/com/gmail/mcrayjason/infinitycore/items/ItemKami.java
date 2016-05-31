@@ -21,10 +21,10 @@ public class ItemKami extends ItemIFC {
     @Override
     public void registerIcons(IIconRegister regIcon)
     {
-        this.icons[0] = regIcon.registerIcon(Reference.MODID + ":" + "itemKami/" + "inertCapIchor");
-        this.icons[1] = regIcon.registerIcon(Reference.MODID + ":" + "itemKami/" + "ringIchor");
-        this.icons[2] = regIcon.registerIcon(Reference.MODID + ":" + "itemKami/" + "threadIchor");
-        this.icons[3] = regIcon.registerIcon(Reference.MODID + ":" + "itemKami/" + "threadReinforced");
+        this.icons[0] = regIcon.registerIcon(Reference.MODID + ":" + "itemsKami/" + "inertCapIchor");
+        this.icons[1] = regIcon.registerIcon(Reference.MODID + ":" + "itemsKami/" + "ringIchor");
+        this.icons[2] = regIcon.registerIcon(Reference.MODID + ":" + "itemsKami/" + "threadIchor");
+        this.icons[3] = regIcon.registerIcon(Reference.MODID + ":" + "itemsKami/" + "threadReinforced");
     }
 
     @Override

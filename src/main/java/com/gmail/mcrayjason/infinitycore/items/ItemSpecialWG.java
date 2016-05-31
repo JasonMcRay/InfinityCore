@@ -22,7 +22,7 @@ public class ItemSpecialWG extends ItemIFC implements IPrimordialCrafting {
     @Override
     public void registerIcons(IIconRegister regIcon)
     {
-        this.icons[0] = regIcon.registerIcon(Reference.MODID + ":" + "itemSpecialWG/" + "dustNaquadah");
+        this.icons[0] = regIcon.registerIcon(Reference.MODID + ":" + "itemsSpecialWG/" + "dustNaquadah");
     }
 
     @Override

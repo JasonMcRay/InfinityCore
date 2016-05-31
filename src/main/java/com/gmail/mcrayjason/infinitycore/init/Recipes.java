@@ -139,6 +139,12 @@ public class Recipes {
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 13), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Uranium, 2L)), 0F);
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 14), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Zinc, 2L)), 0F);
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 15), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Tin, 4L)), 0F);
+        GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 17), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Lithium, 2L)), 0F);
+        GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 18), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Manganese, 2L)), 0F);
+        GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 19), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Antimony, 2L)), 0F);
+        GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 20), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Endium, 2L)), 0F);
+        GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 21), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Yellorium, 2L)), 0F);
+        GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 22), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Desh, 2L)), 0F);
     }
 
     public static void registerThaumcraftRecipes() {

@@ -63,6 +63,12 @@ item.itemCluster.13.name=Native Uranium 238 Cluster
 item.itemCluster.14.name=Native Zinc Cluster
 item.itemCluster.15.name=Native Cassiterite Cluster
 item.itemCluster.16.name=Universal Native Cluster
+item.itemCluster.17.name=Native Lithium Cluster
+item.itemCluster.18.name=Native Manganese Cluster
+item.itemCluster.19.name=Native Antimony Cluster
+item.itemCluster.20.name=Native Endium Cluster
+item.itemCluster.21.name=Native Yellorium Cluster
+item.itemCluster.22.name=Native Desh Cluster
 
 // Kami Items
 item.itemKami.0.name=Inert Ichorium Cap

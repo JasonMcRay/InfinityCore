@@ -3,7 +3,6 @@ package com.gmail.mcrayjason.infinitycore;
 import com.gmail.mcrayjason.infinitycore.compatibility.CrossModCompat;
 import com.gmail.mcrayjason.infinitycore.compatibility.OreDict;
 import com.gmail.mcrayjason.infinitycore.handlers.EventHandler;
-import com.gmail.mcrayjason.infinitycore.helpers.LogHelper;
 import com.gmail.mcrayjason.infinitycore.init.ModBlocks;
 import com.gmail.mcrayjason.infinitycore.init.ModItems;
 import com.gmail.mcrayjason.infinitycore.init.Recipes;

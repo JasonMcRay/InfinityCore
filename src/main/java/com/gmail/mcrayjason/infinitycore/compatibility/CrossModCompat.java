@@ -1,6 +1,5 @@
 package com.gmail.mcrayjason.infinitycore.compatibility;
 
-import chylex.hee.block.vanilla.BlockBasic;
 import chylex.hee.init.BlockList;
 import com.gmail.mcrayjason.infinitycore.InfinityCore;
 import com.gmail.mcrayjason.infinitycore.helpers.LogHelper;
@@ -9,14 +8,10 @@ import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.event.FMLInterModComms;
-import erogenousbeef.bigreactors.common.BRLoader;
-import erogenousbeef.bigreactors.common.BigReactors;
 import gregtech.api.GregTech_API;
 import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.util.GT_OreDictUnificator;
-import micdoodle8.mods.galacticraft.planets.mars.blocks.BlockBasicMars;
-import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;

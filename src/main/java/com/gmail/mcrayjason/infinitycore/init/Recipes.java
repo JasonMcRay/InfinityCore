@@ -6,6 +6,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import crazypants.enderio.EnderIO;
 import gregtech.api.enums.*;
 import gregtech.api.util.GT_OreDictUnificator;
+import gregtech.api.enums.ItemList;
 import ic2.api.item.IC2Items;
 import magicbees.item.types.ResourceType;
 import magicbees.main.Config;
@@ -142,7 +143,7 @@ public class Recipes {
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 17), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Lithium, 2L)), 0F);
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 18), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Manganese, 2L)), 0F);
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 19), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Antimony, 2L)), 0F);
-        GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 20), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Endium, 2L)), 0F);
+        GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 20), (new ItemStack(chylex.hee.init.ItemList.endium_ingot, 2)), 0F);
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 21), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Yellorium, 2L)), 0F);
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 22), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Desh, 2L)), 0F);
     }

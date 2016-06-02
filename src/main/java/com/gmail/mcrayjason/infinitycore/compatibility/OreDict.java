@@ -57,6 +57,8 @@ public class OreDict
         OreDictionary.registerOre("craftingToolElectricWrench", new ItemStack(ModItems.itemDummy, 1, 3));
         OreDictionary.registerOre("craftingToolElectricBuzzsaw", new ItemStack(ModItems.itemDummy, 1, 4));
         OreDictionary.registerOre("craftingToolElectricScrewdriver", new ItemStack(ModItems.itemDummy, 1, 5));
+        OreDictionary.registerOre("craftingToolElectricMiningDrill", new ItemStack(ModItems.itemDummy, 1, 6));
+        OreDictionary.registerOre("craftingToolElectricSolderingIron", new ItemStack(ModItems.itemDummy, 1, 7));
 
         OreDictionary.registerOre("capInertIchorium", new ItemStack(ModItems.itemKami, 1, 0));
         OreDictionary.registerOre("ringIchorium", new ItemStack(ModItems.itemKami, 1, 1));

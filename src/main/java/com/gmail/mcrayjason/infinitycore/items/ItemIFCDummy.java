@@ -12,7 +12,7 @@ import java.util.List;
 
 public class ItemIFCDummy extends ItemIFC
 {
-    private int itemCount = 6;
+    private int itemCount = 8;
 
     private IIcon[] icons = new IIcon[itemCount];
     public ItemIFCDummy(String name) {
@@ -29,6 +29,8 @@ public class ItemIFCDummy extends ItemIFC
         this.icons[3] = regIcon.registerIcon(Reference.MODID + ":" + "dummy/" + "elWrench");
         this.icons[4] = regIcon.registerIcon(Reference.MODID + ":" + "dummy/" + "elBuzzsaw");
         this.icons[5] = regIcon.registerIcon(Reference.MODID + ":" + "dummy/" + "elScrewdriver");
+        this.icons[6] = regIcon.registerIcon(Reference.MODID + ":" + "dummy/" + "elDrill");
+        this.icons[7] = regIcon.registerIcon(Reference.MODID + ":" + "dummy/" + "elSolder");
     }
 
     @Override

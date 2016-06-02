@@ -108,5 +108,7 @@ item.itemDummy.2.name=Electric Chainsaw
 item.itemDummy.3.name=Electric Wrench
 item.itemDummy.4.name=Electric Buzzsaw
 item.itemDummy.5.name=Electric Screwdriver
+item.itemDummy.6.name=Mining Drill
+item.itemDummy.7.name=Soldering Iron
 
 itemGroup.infinityCore=Infinity Core

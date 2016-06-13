@@ -4,6 +4,7 @@ import chylex.hee.block.BlockEnderGoo;
 import com.gmail.mcrayjason.infinitycore.helpers.LogHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import crazypants.enderio.EnderIO;
+import gregtech.api.GregTech_API;
 import gregtech.api.enums.*;
 import gregtech.api.util.GT_OreDictUnificator;
 import gregtech.api.enums.ItemList;
@@ -17,6 +18,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
@@ -29,6 +31,7 @@ import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.research.ResearchItem;
 import thaumcraft.api.research.ResearchPage;
+import thaumcraft.common.config.ConfigItems;
 
 import java.util.Iterator;
 import java.util.List;
@@ -97,6 +100,10 @@ public class Recipes {
                 "p", "s", "r",
                 'p', IC2Items.getItem("plantBall"), 'r', IC2Items.getItem("resin"), 's', GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Stone, 1L));
 
+        // Special Reuse Recipes
+        GameRegistry.addRecipe(new ShapedOreRecipe(ItemApi.getItem("itemWandCap", 3), // Copper Wand Cap (remove original via Minetweaker script)
+                " o ", "tOH",
+                'o', "roundCopper", 't', ConfigItems.itemThaumonomicon.setContainerItem(ConfigItems.itemThaumonomicon), 'O', "ringCopper", 'H', "craftingToolHardHammer"));
 
         // GregTech Processing Recipes
         GT_Values.RA.addAssemblerRecipe(new ItemStack(ModItems.itemMaterial, 8, 2), ItemList.Circuit_Integrated.getWithDamage(0L, 8L), new ItemStack(ModBlocks.pneumaticCasing), 50, 16);

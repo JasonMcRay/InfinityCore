@@ -3,6 +3,7 @@ package com.gmail.mcrayjason.infinitycore;
 import com.gmail.mcrayjason.infinitycore.compatibility.CrossModCompat;
 import com.gmail.mcrayjason.infinitycore.compatibility.OreDict;
 import com.gmail.mcrayjason.infinitycore.handlers.EventHandler;
+import com.gmail.mcrayjason.infinitycore.helpers.LogHelper;
 import com.gmail.mcrayjason.infinitycore.init.ModBlocks;
 import com.gmail.mcrayjason.infinitycore.init.ModItems;
 import com.gmail.mcrayjason.infinitycore.init.Recipes;
@@ -13,6 +14,9 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import erogenousbeef.bigreactors.common.BigReactors;
+import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:gregtech; after:Thaumcraft; after:PneumaticCraft; after:MagicBees")
 public class InfinityCore

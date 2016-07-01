@@ -50,6 +50,7 @@ public class OreDict
         OreDictionary.registerOre("dustEnergeticAlloy", new ItemStack(ModItems.itemMaterial, 1, 20));
         OreDictionary.registerOre("dustVibrantAlloy", new ItemStack(ModItems.itemMaterial, 1, 21));
         OreDictionary.registerOre("dustPhasedGold", new ItemStack(ModItems.itemMaterial, 1, 21));
+        OreDictionary.registerOre("plateElectricalSteel", new ItemStack(ModItems.itemMaterial, 1, 23));
 
         OreDictionary.registerOre("dustNaquadah", new ItemStack(ModItems.itemSpecialWG, 1, 0));
 

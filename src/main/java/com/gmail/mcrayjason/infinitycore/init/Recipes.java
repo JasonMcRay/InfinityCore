@@ -4,10 +4,9 @@ import chylex.hee.block.BlockEnderGoo;
 import com.gmail.mcrayjason.infinitycore.helpers.LogHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 import crazypants.enderio.EnderIO;
-import gregtech.api.GregTech_API;
 import gregtech.api.enums.*;
+import gregtech.api.util.GT_ModHandler;
 import gregtech.api.util.GT_OreDictUnificator;
-import gregtech.api.enums.ItemList;
 import ic2.api.item.IC2Items;
 import magicbees.item.types.ResourceType;
 import magicbees.main.Config;
@@ -18,7 +17,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
@@ -99,6 +97,9 @@ public class Recipes {
         GameRegistry.addRecipe(new ItemStack(ModItems.itemCatalyst, 1, 2),
                 "p", "s", "r",
                 'p', IC2Items.getItem("plantBall"), 'r', IC2Items.getItem("resin"), 's', GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Stone, 1L));
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.itemMaterial, 1, 24),
+                "h p",
+                'h', "craftingToolHardHammer", 'p', "plateElectricalSteel"));
 
         // Special Reuse Recipes
         GameRegistry.addRecipe(new ShapedOreRecipe(ItemApi.getItem("itemWandCap", 3), // Copper Wand Cap (remove original via Minetweaker script)
@@ -135,6 +136,14 @@ public class Recipes {
 
         //Crystalline Seed Grow
         GT_Values.RA.addAutoclaveRecipe(new ItemStack(ModItems.itemMaterial, 1, 22), new FluidStack(BlockEnderGoo.fluid, 2000), new ItemStack(ModItems.itemCatalyst, 1, 4), 1500, 6000, 60);
+
+        //Electrical Steel Item Casing
+        GT_Values.RA.addFluidSolidifierRecipe(ItemList.Shape_Mold_Casing.get(0L), Materials.ElectricalSteel.getMolten(72), new ItemStack(ModItems.itemMaterial, 1, 24), 16, 8);
+        GT_Values.RA.addAlloySmelterRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.ElectricalSteel, 2L), ItemList.Shape_Mold_Casing.get(0L), new ItemStack(ModItems.itemMaterial, 3, 24), 128, 16);
+        GT_Values.RA.addCutterRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.ElectricalSteel, 1L), Materials.Water.getFluid(4),new ItemStack(ModItems.itemMaterial, 2, 24), null, 100, 16);
+        GT_Values.RA.addCutterRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.ElectricalSteel, 1L), GT_ModHandler.getDistilledWater(3L),new ItemStack(ModItems.itemMaterial, 2, 24), null, 100, 16);
+        GT_Values.RA.addCutterRecipe(GT_OreDictUnificator.get(OrePrefixes.plate, Materials.ElectricalSteel, 1L), Materials.Lubricant.getFluid(1),new ItemStack(ModItems.itemMaterial, 2, 24), null, 50, 16);
+        GT_Values.RA.addExtruderRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.ElectricalSteel, 1L), ItemList.Shape_Extruder_Casing.get(0L), new ItemStack(ModItems.itemMaterial, 2, 24), 32, 48);
 
         // Smelting Recipes
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 1), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Beryllium, 2L)), 0F);

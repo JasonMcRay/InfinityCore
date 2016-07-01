@@ -22,6 +22,8 @@ item.itemMaterial.19.name=Chromic Platinum Dust
 item.itemMaterial.20.name=Energetic Alloy Dust
 item.itemMaterial.21.name=Vibrant Alloy Dust
 item.itemMaterial.22.name=Crystalline Seed
+item.itemMaterial.23.name=Electrical Steel Plate
+item.itemMaterial.24.name=Electrical Steel Item Casing
 
 // Items
 item.droneFrame.name=Drone Case (Rotor)

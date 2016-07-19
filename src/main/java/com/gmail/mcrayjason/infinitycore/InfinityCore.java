@@ -18,7 +18,7 @@ import erogenousbeef.bigreactors.common.BigReactors;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
-@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:gregtech; after:Thaumcraft; after:PneumaticCraft; after:MagicBees")
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, dependencies = "required-after:gregtech; after:Thaumcraft; after:PneumaticCraft; after:MagicBees; after:HardcoreEnderExpansion")
 public class InfinityCore
 {
     @SidedProxy(clientSide = Reference.CLIENT_PROXY, serverSide = Reference.COMMON_PROXY)

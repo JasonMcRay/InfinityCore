@@ -2,6 +2,7 @@ package com.gmail.mcrayjason.infinitycore.init;
 
 import chylex.hee.block.BlockEnderGoo;
 import com.gmail.mcrayjason.infinitycore.helpers.LogHelper;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.registry.GameRegistry;
 import crazypants.enderio.EnderIO;
 import gregtech.api.enums.*;
@@ -41,6 +42,7 @@ public class Recipes {
     private static InfusionRecipe magicCatalystInfusion;
     private static InfusionRecipe fuelCatalystInfusion;
     private static InfusionRecipe dobCatalystInfusion;
+    private static InfusionRecipe dragonEggInfusion;
 
     private static ItemStack shardAir = ItemApi.getItem("itemShard", 0);
     private static ItemStack shardFire = ItemApi.getItem("itemShard", 1);
@@ -135,7 +137,11 @@ public class Recipes {
         GT_Values.RA.addMixerRecipe(GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Aluminium, 1L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Manganese, 1L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Titanium, 1L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Tungsten, 1L), null, null, new ItemStack(ModItems.itemCatalyst, 1, 7), 100, 16);
 
         //Crystalline Seed Grow
-        GT_Values.RA.addAutoclaveRecipe(new ItemStack(ModItems.itemMaterial, 1, 22), new FluidStack(BlockEnderGoo.fluid, 2000), new ItemStack(ModItems.itemCatalyst, 1, 4), 1500, 6000, 60);
+        if (Loader.isModLoaded("HardcoreEnderExpansion")) {
+        GT_Values.RA.addAutoclaveRecipe(new ItemStack(ModItems.itemMaterial, 1, 22), new FluidStack(BlockEnderGoo.fluid, 2000), new ItemStack(ModItems.itemCatalyst, 1, 4), 1500, 6000, 60); }
+        else {
+                GT_Values.RA.addAutoclaveRecipe(new ItemStack(ModItems.itemMaterial, 1, 22), Materials.Enderium.getMolten(2000L), new ItemStack(ModItems.itemCatalyst, 1, 4), 1500, 6000, 60);
+        }
 
         //Electrical Steel Item Casing
         GT_Values.RA.addFluidSolidifierRecipe(ItemList.Shape_Mold_Casing.get(0L), Materials.ElectricalSteel.getMolten(72), new ItemStack(ModItems.itemMaterial, 1, 24), 16, 8);
@@ -159,7 +165,9 @@ public class Recipes {
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 17), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Lithium, 2L)), 0F);
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 18), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Manganese, 2L)), 0F);
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 19), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Antimony, 2L)), 0F);
-        GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 20), (new ItemStack(chylex.hee.init.ItemList.endium_ingot, 2)), 0F);
+        if (Loader.isModLoaded("HardcoreEnderExpansion")) {
+            GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 20), (new ItemStack(chylex.hee.init.ItemList.endium_ingot, 2)), 0F);
+        }
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 21), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Yellorium, 2L)), 0F);
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 22), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Desh, 2L)), 0F);
     }
@@ -167,23 +175,41 @@ public class Recipes {
     public static void registerThaumcraftRecipes() {
         ItemStack dragonChunk = Config.miscResources.getStackForType(ResourceType.DRAGON_CHUNK);
         ItemStack falseLifeEssence = Config.miscResources.getStackForType(ResourceType.ESSENCE_FALSE_LIFE);
+        ItemStack dustObsidian = GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Obsidian, 1L);
+        ItemStack enderEye = new ItemStack(Items.ender_eye);
+        ItemStack dustNaquadria = GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Naquadria, 1L);
 
         dormantEggInfusion = ThaumcraftApi.addInfusionCraftingRecipe("IT_DraconicInfusion", new ItemStack(ModItems.dormantEgg), 15, new AspectList().add(Aspect.ELDRITCH, 32).add(Aspect.BEAST, 16).add(Aspect.MAGIC, 16).add(Aspect.LIFE, 8).add(Aspect.DARKNESS, 16).add(Aspect.FLIGHT, 16).add(Aspect.WEATHER, 16), new ItemStack(Items.egg), new ItemStack[]{ falseLifeEssence, dragonChunk, dragonChunk, dragonChunk, dragonChunk, dragonChunk, dragonChunk, dragonChunk, dragonChunk});
         magicCatalystInfusion = ThaumcraftApi.addInfusionCraftingRecipe("IT_CatalystMagic", new ItemStack(ModItems.itemCatalyst, 1, 0), 12, new AspectList().add(Aspect.ORDER, 15).add(Aspect.GREED, 15).add(Aspect.FLIGHT, 50).add(Aspect.getAspect("nebrisum"), 15).add(Aspect.MAGIC, 15), shardBalanced, new ItemStack[] { shardAir, shardFire, shardWater, shardEarth, shardOrder, shardEntropy, GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Thaumium, 1L) });
         fuelCatalystInfusion = ThaumcraftApi.addInfusionCraftingRecipe("IT_CatalystFuel", new ItemStack(ModItems.itemCatalyst, 1, 1), 12, new AspectList().add(Aspect.FIRE, 15).add(Aspect.ENERGY, 15).add(Aspect.EXCHANGE, 15), GT_OreDictUnificator.get(OrePrefixes.cell, Materials.OilHeavy, 1L), new ItemStack[] { GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Lignite, 1L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Coal, 1L), GT_OreDictUnificator.get(OrePrefixes.gem, Materials.Coal, 1L), GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Uranium235, 1L), GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Naquadah, 1L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Carbon, 1L), GT_OreDictUnificator.get(OrePrefixes.dust, Materials.Redstone, 1L) } );
         dobCatalystInfusion = ThaumcraftApi.addInfusionCraftingRecipe("IT_CatalystDOB", new ItemStack(ModBlocks.blockCatalyst), 15, new AspectList(), new ItemStack(Blocks.dragon_egg), new ItemStack[] {new ItemStack(ModItems.itemCatalyst, 1, 0), new ItemStack(ModItems.itemCatalyst, 1, 1), new ItemStack(ModItems.itemCatalyst, 1, 2), new ItemStack(ModItems.itemCatalyst, 1, 3), new ItemStack(ModItems.itemCatalyst, 1, 4), new ItemStack(ModItems.itemCatalyst, 1, 5), new ItemStack(ModItems.itemCatalyst, 1, 6), new ItemStack(ModItems.itemCatalyst, 1, 7)} );
+        if (!Loader.isModLoaded("HardcoreEnderExpansion")) {
+            dragonEggInfusion = ThaumcraftApi.addInfusionCraftingRecipe("IT_DraconicInfusion", new ItemStack(Blocks.dragon_egg), 10, new AspectList().add(Aspect.ELDRITCH, 24).add(Aspect.BEAST, 12).add(Aspect.MAGIC, 12).add(Aspect.LIFE, 6).add(Aspect.DARKNESS, 12).add(Aspect.FLIGHT, 12).add(Aspect.WEATHER, 12), new ItemStack(ModItems.dormantEgg), new ItemStack[]{ dustObsidian, enderEye, dustObsidian, dustNaquadria, dustObsidian, enderEye, dustObsidian, dustNaquadria });
+        }
     }
 
     public static void addResearches() {
-        new ResearchItem("IT_DraconicInfusion", "MAGICBEES", new AspectList().add(Aspect.ELDRITCH, 8).add(Aspect.BEAST, 4).add(Aspect.MAGIC, 4).add(Aspect.LIFE, 2).add(Aspect.DARKNESS, 4).add(Aspect.FLIGHT, 4).add(Aspect.WEATHER, 4), 1, 1, 2, new ItemStack(ModItems.dormantEgg))
-                .setPages(new ResearchPage("it.researchPage.draconicInfusion.1"), new ResearchPage(dormantEggInfusion))
-                .setHidden()
-                .setItemTriggers(new ItemStack(Blocks.dragon_egg))
-                .setParents("MB_EssenceLife")
-                .setParentsHidden("GT_MAGICABSORB2")
-                .setConcealed()
-                .setSpecial()
-                .registerResearchItem();
+        if (Loader.isModLoaded("HardcoreEnderExpansion")) {
+            new ResearchItem("IT_DraconicInfusion", "MAGICBEES", new AspectList().add(Aspect.ELDRITCH, 8).add(Aspect.BEAST, 4).add(Aspect.MAGIC, 4).add(Aspect.LIFE, 2).add(Aspect.DARKNESS, 4).add(Aspect.FLIGHT, 4).add(Aspect.WEATHER, 4), 1, 1, 2, new ItemStack(ModItems.dormantEgg))
+                    .setPages(new ResearchPage("it.researchPage.draconicInfusion.1"), new ResearchPage(dormantEggInfusion))
+                    .setHidden()
+                    .setItemTriggers(new ItemStack(Blocks.dragon_egg))
+                    .setParents("MB_EssenceLife")
+                    .setParentsHidden("GT_MAGICABSORB2")
+                    .setConcealed()
+                    .setSpecial()
+                    .registerResearchItem();
+        } else {
+            new ResearchItem("IT_DraconicInfusion", "MAGICBEES", new AspectList().add(Aspect.ELDRITCH, 8).add(Aspect.BEAST, 4).add(Aspect.MAGIC, 4).add(Aspect.LIFE, 2).add(Aspect.DARKNESS, 4).add(Aspect.FLIGHT, 4).add(Aspect.WEATHER, 4), 1, 1, 2, new ItemStack(ModItems.dormantEgg))
+                    .setPages(new ResearchPage("it.researchPage.draconicInfusion.1"), new ResearchPage(dormantEggInfusion), new ResearchPage(dragonEggInfusion))
+                    .setHidden()
+                    .setItemTriggers(new ItemStack(Blocks.dragon_egg))
+                    .setParents("MB_EssenceLife")
+                    .setParentsHidden("GT_MAGICABSORB2")
+                    .setConcealed()
+                    .setSpecial()
+                    .registerResearchItem();
+        }
 
         new ResearchItem("IT_CatalystMagic", "MAGICBEES", new AspectList().add(Aspect.ORDER, 5).add(Aspect.GREED, 5).add(Aspect.FLIGHT, 5).add(Aspect.getAspect("nebrisum"), 5), 3, -3, 3, new ItemStack(ModItems.itemCatalyst, 1, 0))
                 .setPages(new ResearchPage("it.researchPage.magicCatalyst.1"), new ResearchPage(magicCatalystInfusion))

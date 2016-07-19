@@ -8,12 +8,10 @@ import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.event.FMLInterModComms;
-import erogenousbeef.bigreactors.common.BigReactors;
 import gregtech.api.GregTech_API;
 import gregtech.api.enums.Materials;
 import gregtech.api.enums.OrePrefixes;
 import gregtech.api.util.GT_OreDictUnificator;
-import micdoodle8.mods.galacticraft.planets.GalacticraftPlanets;
 import micdoodle8.mods.galacticraft.planets.mars.blocks.MarsBlocks;
 import micdoodle8.mods.galacticraft.planets.mars.items.MarsItems;
 import net.minecraft.block.Block;
@@ -130,7 +128,8 @@ public class CrossModCompat
             FMLInterModComms.sendMessage("Thaumcraft", "nativeCluster", Block.getIdFromBlock(GregTech_API.sBlockOres1) + "," + GT_OreDictUnificator.get(OrePrefixes.oreBlackgranite, Materials.Cobaltite, 1L).getItemDamage() + "," + Item.getIdFromItem(ModItems.itemCluster) + "," + 2 + ",1.0");
             FMLInterModComms.sendMessage("Thaumcraft", "nativeCluster", Block.getIdFromBlock(GregTech_API.sBlockOres1) + "," + GT_OreDictUnificator.get(OrePrefixes.oreRedgranite, Materials.Cobaltite, 1L).getItemDamage() + "," + Item.getIdFromItem(ModItems.itemCluster) + "," + 2 + ",1.0");
             // Endium Clusters
-            FMLInterModComms.sendMessage("Thaumcraft", "nativeCluster", Block.getIdFromBlock(BlockList.endium_ore) + "," + 0 + "," + Item.getIdFromItem(ModItems.itemCluster) + "," + 20 + ",1.0");
+            if (Loader.isModLoaded("HardcoreEnderExpansion")) {
+                FMLInterModComms.sendMessage("Thaumcraft", "nativeCluster", Block.getIdFromBlock(BlockList.endium_ore) + "," + 0 + "," + Item.getIdFromItem(ModItems.itemCluster) + "," + 20 + ",1.0"); }
             // Iridium Clusters
             FMLInterModComms.sendMessage("Thaumcraft", "nativeCluster", Block.getIdFromBlock(GregTech_API.sBlockOres1) + "," + GT_OreDictUnificator.get(OrePrefixes.ore, Materials.Iridium, 1L).getItemDamage() + "," + Item.getIdFromItem(ModItems.itemCluster) + "," + 3 + ",1.0");
             FMLInterModComms.sendMessage("Thaumcraft", "nativeCluster", Block.getIdFromBlock(GregTech_API.sBlockOres1) + "," + GT_OreDictUnificator.get(OrePrefixes.oreNetherrack, Materials.Iridium, 1L).getItemDamage() + "," + Item.getIdFromItem(ModItems.itemCluster) + "," + 3 + ",1.0");

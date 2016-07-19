@@ -2,6 +2,7 @@ package com.gmail.mcrayjason.infinitycore.items;
 
 import com.gmail.mcrayjason.infinitycore.Reference;
 import com.gmail.mcrayjason.infinitycore.creativetab.CreativeTabIFC;
+import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.gui.GuiScreen;
@@ -25,7 +26,7 @@ public class ItemDragon extends Item {
     @Override
     @SideOnly(Side.CLIENT)
     public void addInformation(ItemStack itemstack, EntityPlayer player, List info, boolean bool) {
-        if (itemstack != null) {
+        if (itemstack != null && Loader.isModLoaded("HardcoreEnderExpansion")) {
             if (GuiScreen.isShiftKeyDown()) {
                 info.add(EnumChatFormatting.LIGHT_PURPLE + "Needs to be infused with Dragon Essence in Dragon Essence Altar");
         } else {

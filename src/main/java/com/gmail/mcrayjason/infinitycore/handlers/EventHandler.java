@@ -12,7 +12,7 @@ import net.minecraft.nbt.NBTTagCompound;
 
 public class EventHandler
 {
-    @SubscribeEvent
+    /*@SubscribeEvent
     public void playerLoggedIn(PlayerLoggedInEvent event)
     {
         EntityPlayer player = event.player;
@@ -41,5 +41,5 @@ public class EventHandler
         stack.stackTagCompound.setString("identifier", "GUIDE_NEI");
             player.inventory.addItemStackToInventory(stack);
         }
-    }
+    }*/
 }

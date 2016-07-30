@@ -154,8 +154,10 @@ public class Recipes {
         GT_Values.RA.addExtruderRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.ElectricalSteel, 1L), ItemList.Shape_Extruder_Casing.get(0L), new ItemStack(ModItems.itemMaterial, 2, 24), 32, 48);
 
         // Flesh Leather, Leather
-        GT_ModHandler.addCompressionRecipe(new ItemStack(Items.rotten_flesh, 8), new ItemStack(ModItems.itemMaterial, 1, 25));
-        GT_Values.RA.addAlloySmelterRecipe(new ItemStack(ModItems.itemMaterial, 1, 25),GT_OreDictUnificator.get(OrePrefixes.dust, Materials.RockSalt, 16L), new ItemStack(Items.leather), 200, 16);
+        if (Loader.isModLoaded("VeganOption")){
+            GT_ModHandler.addCompressionRecipe(GT_ModHandler.getModItem("VeganOption", "rottenPlants", 8, 0), new ItemStack(ModItems.itemMaterial, 1, 25));
+            GT_Values.RA.addAlloySmelterRecipe(new ItemStack(ModItems.itemMaterial, 1, 25),GT_OreDictUnificator.get(OrePrefixes.dust, Materials.RockSalt, 16L), new ItemStack(Items.leather), 200, 16);
+        }
 
         // Smelting Recipes
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 1), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Beryllium, 2L)), 0F);

@@ -18,6 +18,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
@@ -34,8 +35,6 @@ import thaumcraft.common.config.ConfigItems;
 
 import java.util.Iterator;
 import java.util.List;
-
-import static ic2.api.recipe.Recipes.compressor;
 
 public class Recipes {
     @SuppressWarnings("RedundantArrayCreation")

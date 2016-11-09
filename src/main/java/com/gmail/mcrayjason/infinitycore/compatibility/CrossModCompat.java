@@ -34,9 +34,6 @@ public class CrossModCompat
             sendThaumcraftIMC();
             registerAspects();
         }
-        if (Loader.isModLoaded("ChickenChunks")) {
-            gregifyChickenchunks();
-        }
         if (Loader.isModLoaded("NotEnoughItems")) {
             hideNEIItems();
         }
@@ -62,34 +59,15 @@ public class CrossModCompat
 
     }
 
-    private static void hideNEIItems()
-    {
+    private static void hideNEIItems() {
         LogHelper.info("Hiding Dummy Items");
         try {
-        String data = Resources.toString(Resources.getResource(InfinityCore.class, "/minetweaker/InfinityCore.zs"), Charsets.UTF_8);
-        NBTTagCompound nbtData = new NBTTagCompound();
-        nbtData.setString("name", "InfinityCore.zs");
-        nbtData.setString("content", data);
-        FMLInterModComms.sendMessage("MineTweaker3", "addMineTweakerScript", nbtData);
-    }
-        catch (IOException ex)
-        {
-            ex.printStackTrace();
-        }
-    }
-
-    private static void gregifyChickenchunks()
-    {
-        LogHelper.info("ChickenChunks Detected. Gregifying recipes");
-        try {
-            String data = Resources.toString(Resources.getResource(InfinityCore.class, "/minetweaker/ChickenChunks.zs"), Charsets.UTF_8);
+            String data = Resources.toString(Resources.getResource(InfinityCore.class, "/minetweaker/InfinityCore.zs"), Charsets.UTF_8);
             NBTTagCompound nbtData = new NBTTagCompound();
-            nbtData.setString("name", "ChickenChunks.zs");
+            nbtData.setString("name", "InfinityCore.zs");
             nbtData.setString("content", data);
             FMLInterModComms.sendMessage("MineTweaker3", "addMineTweakerScript", nbtData);
-        }
-        catch (IOException ex)
-        {
+        } catch (IOException ex) {
             ex.printStackTrace();
         }
     }

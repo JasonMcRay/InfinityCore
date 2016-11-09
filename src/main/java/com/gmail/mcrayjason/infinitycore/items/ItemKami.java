@@ -10,7 +10,7 @@ import net.minecraft.util.IIcon;
 import java.util.List;
 
 public class ItemKami extends ItemIFC {
-    private int itemCount = 4;
+    private int itemCount = 5;
 
     private IIcon[] icons = new IIcon[itemCount];
 
@@ -25,6 +25,7 @@ public class ItemKami extends ItemIFC {
         this.icons[1] = regIcon.registerIcon(Reference.MODID + ":" + "itemsKami/" + "ringIchor");
         this.icons[2] = regIcon.registerIcon(Reference.MODID + ":" + "itemsKami/" + "threadIchor");
         this.icons[3] = regIcon.registerIcon(Reference.MODID + ":" + "itemsKami/" + "threadReinforced");
+        this.icons[4] = regIcon.registerIcon(Reference.MODID + ":" + "itemsKami/" + "firestoneEnderShifted");
     }
 
     @Override

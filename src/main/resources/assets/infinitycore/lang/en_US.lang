@@ -78,6 +78,7 @@ item.itemKami.0.name=Inert Ichorium Cap
 item.itemKami.1.name=Ichorium Ring
 item.itemKami.2.name=Ichorthread
 item.itemKami.3.name=Reinforced Thread
+item.itemKami.4.name=Ender-Shifted Refined Firestone
 
 // Research Nodes
 tc.research_name.IT_DraconicInfusion=Draconic Infusion

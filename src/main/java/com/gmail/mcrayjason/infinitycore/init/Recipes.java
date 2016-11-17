@@ -24,6 +24,7 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import pneumaticCraft.common.block.Blockss;
 import pneumaticCraft.common.item.Itemss;
+import scala.tools.nsc.backend.icode.Primitives;
 import thaumcraft.api.ItemApi;
 import thaumcraft.api.ThaumcraftApi;
 import thaumcraft.api.aspects.Aspect;
@@ -157,6 +158,11 @@ public class Recipes {
             GT_ModHandler.addCompressionRecipe(GT_ModHandler.getModItem("VeganOption", "rottenPlants", 8, 0), new ItemStack(ModItems.itemMaterial, 1, 25));
             GT_Values.RA.addAlloySmelterRecipe(new ItemStack(ModItems.itemMaterial, 1, 25),GT_OreDictUnificator.get(OrePrefixes.dust, Materials.RockSalt, 16L), new ItemStack(Items.leather), 200, 16);
         }
+
+        // Dimensional Alloy
+        GT_Values.RA.addBlastRecipe(GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Enderium, 1L), GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Naquadah, 1L), null, null, new ItemStack(ModItems.itemMaterial, 2, 26), null, 10800, 120, 5400);
+        GT_Values.RA.addVacuumFreezerRecipe(new ItemStack(ModItems.itemMaterial, 1, 26), new ItemStack(ModItems.itemMaterial, 1, 27), 588);
+        GT_Values.RA.addBenderRecipe(new ItemStack(ModItems.itemMaterial, 1, 27), new ItemStack(ModItems.itemMaterial, 1, 28), 98, 24);
 
         // Smelting Recipes
         GameRegistry.addSmelting(new ItemStack(ModItems.itemCluster, 1, 1), (GT_OreDictUnificator.get(OrePrefixes.ingot, Materials.Beryllium, 2L)), 0F);

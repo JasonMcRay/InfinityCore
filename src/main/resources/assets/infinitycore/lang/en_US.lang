@@ -25,6 +25,9 @@ item.itemMaterial.22.name=Crystalline Seed
 item.itemMaterial.23.name=Electrical Steel Plate
 item.itemMaterial.24.name=Electrical Steel Item Casing
 item.itemMaterial.25.name=Patchwork Leather
+item.itemMaterial.26.name=Hot Dimensional Alloy
+item.itemMaterial.27.name=Dimensional Alloy Ingot
+item.itemMaterial.28.name=Dimensional Alloy Plate
 
 // Items
 item.droneFrame.name=Drone Case (Rotor)

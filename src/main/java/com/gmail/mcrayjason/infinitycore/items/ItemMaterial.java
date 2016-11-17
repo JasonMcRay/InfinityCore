@@ -9,9 +9,10 @@ import net.minecraft.util.IIcon;
 
 import java.util.List;
 
+@SuppressWarnings("deprecation")
 public class ItemMaterial extends ItemIFC
 {
-    int itemCount = 26;
+    int itemCount = 29;
 
     public IIcon[] icons = new IIcon[itemCount];
     public ItemMaterial(String name) {
@@ -47,6 +48,9 @@ public class ItemMaterial extends ItemIFC
         this.icons[23] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "plateElectricalSteel");
         this.icons[24] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "itemCasingElectricalSteel");
         this.icons[25] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "rottenLeather");
+        this.icons[26] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "ingotHotDimensionalAlloy");
+        this.icons[27] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "ingotDimensionalAlloy");
+        this.icons[28] = regIcon.registerIcon(Reference.MODID + ":" + "materials/" + "plateDimensionalAlloy");
     }
 
     @Override

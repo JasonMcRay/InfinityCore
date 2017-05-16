@@ -74,3 +74,6 @@ local.properties
 /out/
 gradlew
 classes/
+
+# Git
+.shelf/

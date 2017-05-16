@@ -6,14 +6,20 @@
  */
 package com.jadarstudios.developercapes.cape;
 
+import java.lang.reflect.Field;
+import java.net.URL;
+import java.util.Map;
+
+import com.jadarstudios.developercapes.DevCapes;
 import com.jadarstudios.developercapes.HDImageBuffer;
-import com.mojang.authlib.minecraft.MinecraftProfileTexture;
+import com.mojang.authlib.minecraft.MinecraftProfileTexture.Type;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.AbstractClientPlayer;
+import net.minecraft.client.network.NetworkPlayerInfo;
 import net.minecraft.client.renderer.ThreadDownloadImageData;
 import net.minecraft.util.ResourceLocation;
-
-import java.net.URL;
+import net.minecraftforge.fml.relauncher.ReflectionHelper;
 
 /**
  * Default Cape implementation
@@ -32,11 +38,31 @@ public class StaticCape extends AbstractCape {
     }
 
     @Override
-    public void loadTexture(AbstractClientPlayer player) {
-        ResourceLocation location = this.getLocation();
-        player.func_152121_a(MinecraftProfileTexture.Type.CAPE, location);
+    public void loadTexture (AbstractClientPlayer player) {
+        ResourceLocation location = getLocation();
 
-        Minecraft.getMinecraft().renderEngine.loadTexture(location, this.getTexture());
+        // mmdanggg2: using reflection to modify the private locationCape, hacky
+        // but it works.
+        // Wehavecookies56: Added obfuscated field names for reflection and fixed for 1.9
+        try {
+            Field playerInfoF = ReflectionHelper.findField(AbstractClientPlayer.class, "playerInfo", "field_175157_a");
+            playerInfoF.setAccessible(true);
+            NetworkPlayerInfo nci = (NetworkPlayerInfo) playerInfoF.get(player);
+
+            Field playerTexturesF = ReflectionHelper.findField(NetworkPlayerInfo.class, "playerTextures", "field_187107_a");
+            playerTexturesF.setAccessible(true);
+            ((Map) playerTexturesF.get(nci)).put(Type.CAPE, location);
+
+            playerInfoF.setAccessible(false);
+            playerTexturesF.setAccessible(false);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            DevCapes.getInstance();
+            DevCapes.logger.error("Setting cape ResourceLocation failed!");
+        }
+
+        Minecraft.getMinecraft().renderEngine.loadTexture(location, getTexture());
     }
 
     @Override

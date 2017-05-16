@@ -2,6 +2,9 @@ package com.gmail.mcrayjason.infinitycore.proxies;
 
 import com.gmail.mcrayjason.infinitycore.helpers.LogHelper;
 import com.jadarstudios.developercapes.DevCapes;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.item.Item;
+import net.minecraftforge.client.model.ModelLoader;
 
 public class ClientProxy extends CommonProxy
 {
@@ -14,7 +17,7 @@ public class ClientProxy extends CommonProxy
     public void cape()
     {
         LogHelper.info("Dressing Capes");
-        DevCapes.getInstance().registerConfig("https://gist.githubusercontent.com/JasonMcRay/6b0f52ef900be6fb24694e9ea6b5c7cd/raw/", "InfinityCore");
+        DevCapes.getInstance().registerConfig("https://gist.githubusercontent.com/JasonMcRay/b1d2919b84e2901b755bfca38bb41f77/raw/", "InfinityCore");
         LogHelper.info("Capes Dressed");
 
     }

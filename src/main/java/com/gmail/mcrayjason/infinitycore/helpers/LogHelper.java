@@ -1,7 +1,7 @@
 package com.gmail.mcrayjason.infinitycore.helpers;
 
 import com.gmail.mcrayjason.infinitycore.Reference;
-import cpw.mods.fml.common.FMLLog;
+import net.minecraftforge.fml.common.FMLLog;
 import org.apache.logging.log4j.Level;
 
 

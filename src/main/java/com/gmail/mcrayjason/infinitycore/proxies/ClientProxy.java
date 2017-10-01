@@ -14,7 +14,7 @@ public class ClientProxy extends CommonProxy
     public void cape()
     {
         LogHelper.info("Dressing Capes");
-        DevCapes.getInstance().registerConfig("https://gist.githubusercontent.com/JasonMcRay/6b0f52ef900be6fb24694e9ea6b5c7cd/raw/", "InfinityCore");
+        DevCapes.getInstance().registerConfig("https://gist.githubusercontent.com/JasonMcRay/b1d2919b84e2901b755bfca38bb41f77/raw/", "InfinityCore");
         LogHelper.info("Capes Dressed");
 
     }
